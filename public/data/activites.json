@@ -1,0 +1,128 @@
+{
+    "activites": [
+        {
+            "date": "2026-01-15",
+            "type": "quiz",
+            "titre": "Bienvenue dans l'univers de Lionel TARCHALA",
+            "auteurId": "tarchala",
+            "consigneEnseignant": "Première activité pour lancer le compte à rebours ! Faites observer l'image et laissez les élèves s'exprimer sur ce que ressent le personnage avant de proposer les choix.",
+            "consigneEleves": "Observez bien cette illustration. Que ressent le personnage principal ?",
+            "image": "/images/activites/2026-01-05/image-principale.jpg",
+            "propositions": [
+                {
+                    "id": "a",
+                    "texte": "Il est très en colère",
+                    "image": "/images/activites/2026-01-05/proposition-a.jpg",
+                    "correct": false,
+                    "commentaire": "Regarde bien son visage et sa posture : voit-on vraiment des signes de colère (sourcils froncés, bouche crispée) ?"
+                },
+                {
+                    "id": "b",
+                    "texte": "Il a l’air triste ou inquiet",
+                    "image": "/images/activites/2026-01-05/proposition-b.jpg",
+                    "correct": true,
+                    "commentaire": "Bravo ! On peut deviner sa tristesse ou son inquiétude grâce à son expression et à la situation dans laquelle il se trouve."
+                },
+                {
+                    "id": "c",
+                    "texte": "Il rit aux éclats",
+                    "image": "/images/activites/2026-01-05/proposition-c.jpg",
+                    "correct": false,
+                    "commentaire": "Ici, on ne voit pas vraiment un grand sourire ni des signes de joie."
+                }
+            ],
+            "adaptations": {
+                "maternelle": "Privilégiez l’oral : proposez les émotions à l’oral en pointant chaque image et en reformulant avec les mots des élèves.",
+                "cycle2": "Les élèves peuvent lire les propositions, entourer celle qu’ils choisissent et expliquer avec leurs mots ce qui, dans l’image, leur fait penser à cette émotion.",
+                "cycle3": "Demandez aux élèves de justifier leur choix en s’appuyant sur des détails précis de l’illustration (regard, bouche, position du corps, décor, couleurs)."
+            }
+        },
+        {
+            "date": "2026-01-16",
+            "type": "intrus",
+            "titre": "L'intrus de Xavière BRONCARD",
+            "auteurId": "broncard",
+            "consigneEnseignant": "Laissez les élèves observer les vignettes. Demandez-leur ce qu'ils voient avant de leur demander de trouver l'intrus. Encouragez-les à justifier leur choix.",
+            "consigneEleves": "Laquelle de ces images est l'intrus ?",
+            "vignettes": [
+                {
+                    "id": "1",
+                    "image": "/images/activites/2026-01-06/vignette-1.jpg",
+                    "titre": "Vignette 1",
+                    "isIntrus": false,
+                    "explication": "Cette image n'est pas l'intrus. Elle partage le même univers coloré que les autres."
+                },
+                {
+                    "id": "2",
+                    "image": "/images/activites/2026-01-06/vignette-2.jpg",
+                    "titre": "Vignette 2",
+                    "isIntrus": true,
+                    "explication": "Bravo ! C'est bien l'intrus. Cette image a un style réaliste alors que les autres sont dans un style fantastique typique de Xavière BRONCARD."
+                },
+                {
+                    "id": "3",
+                    "image": "/images/activites/2026-01-06/vignette-3.jpg",
+                    "titre": "Vignette 3",
+                    "isIntrus": false,
+                    "explication": "Cette image n'est pas l'intrus. Elle utilise les mêmes couleurs vives caractéristiques."
+                },
+                {
+                    "id": "4",
+                    "image": "/images/activites/2026-01-06/vignette-4.jpg",
+                    "titre": "Vignette 4",
+                    "isIntrus": false,
+                    "explication": "Cette image n'est pas l'intrus. Elle fait bien partie de l'univers de l'illustratrice."
+                }
+            ],
+            "adaptations": {
+                "maternelle": "Laissez les élèves pointer du doigt et expliquer oralement ce qu'ils voient. Pas besoin de lire les titres.",
+                "cycle2": "Les élèves peuvent lire les titres et expliquer avec leurs propres mots pourquoi une image est l'intrus.",
+                "cycle3": "Demandez aux élèves d'identifier précisément les caractéristiques visuelles qui font de cette image un intrus (couleurs, style, technique, etc.)."
+            }
+        }
+    ],
+    "datesActivites": [
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-19",
+        "2026-01-20",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-02",
+        "2026-04-03",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-23",
+        "2026-04-24"
+    ]
+}

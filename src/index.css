@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply antialiased;
+    }
+
+    * {
+        @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/50 focus-visible:ring-offset-2;
+    }
+}
+
+@layer utilities {
+    /* Animation personnalisée pour le décompte */
+    @keyframes pulse-scale {
+        0%,
+        100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-pulse-scale {
+        animation: pulse-scale 2s ease-in-out infinite;
+    }
+
+    /* Animation d'entrée pour le feedback */
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "titre": "Compte à rebours du salon du livre",
+    "dateSalon": "2026-04-25",
+    "dateDebutCompteARebours": 100,
+    "description": "Une activité quotidienne de 10 minutes pour découvrir les auteurs et illustrateurs avant le salon du livre.",
+    "messageAvantDebut": "Le compte à rebours commencera à J-100, soit le 15 janvier 2026. Revenez à partir de cette date !",
+    "messageApres": "Le salon est passé ! Merci pour votre participation. Rendez-vous l'année prochaine !",
+    "messageJourJ": "C'est le grand jour ! Bon salon du livre !",
+    "auteurs": [
+        {
+            "id": "tarchala",
+            "nom": "Lionel TARCHALA",
+            "type": "illustrateur",
+            "voteCE2": true,
+            "bio": "Illustrateur passionné par les univers fantastiques.",
+            "photo": "auteurs/tarchala.jpg"
+        },
+        {
+            "id": "broncard",
+            "nom": "Xavière BRONCARD",
+            "type": "illustratrice",
+            "voteCE2": true,
+            "bio": "Illustratrice aux couleurs vives et joyeuses.",
+            "photo": "auteurs/broncard.jpg"
+        },
+        {
+            "id": "vaquez",
+            "nom": "Pierre VAQUEZ",
+            "type": "illustrateur",
+            "voteCE2": true,
+            "bio": "Illustrateur au trait délicat et poétique.",
+            "photo": "auteurs/vaquez.jpg"
+        },
+        {
+            "id": "balme",
+            "nom": "Delphine BALME",
+            "type": "illustratrice",
+            "voteCE2": true,
+            "bio": "Illustratrice aux personnages expressifs.",
+            "photo": "auteurs/balme.jpg"
+        },
+        {
+            "id": "bonbon",
+            "nom": "Cécile BONBON",
+            "type": "illustratrice",
+            "bio": "Illustratrice spécialisée dans l'univers enfantin.",
+            "photo": "auteurs/bonbon.jpg"
+        },
+        {
+            "id": "dieterle",
+            "nom": "Nathalie DIETERLE",
+            "type": "illustratrice",
+            "bio": "Illustratrice reconnue pour ses albums jeunesse.",
+            "photo": "auteurs/dieterle.jpg"
+        },
+        {
+            "id": "jacoud",
+            "nom": "Cécile JACOUD",
+            "type": "illustratrice",
+            "bio": "Illustratrice au style moderne et coloré.",
+            "photo": "auteurs/jacoud.jpg"
+        },
+        {
+            "id": "bronn",
+            "nom": "Theresa BRONN",
+            "type": "illustratrice",
+            "bio": "Illustratrice créative et audacieuse.",
+            "photo": "auteurs/bronn.jpg"
+        },
+        {
+            "id": "pollet",
+            "nom": "Clémence POLLET",
+            "type": "illustratrice",
+            "bio": "Illustratrice aux univers graphiques originaux.",
+            "photo": "auteurs/pollet.jpg"
+        },
+        {
+            "id": "lafond",
+            "nom": "Marie-Hélène LAFOND",
+            "type": "autrice",
+            "bio": "Autrice d'histoires tendres et émouvantes.",
+            "photo": "auteurs/lafond.jpg"
+        },
+        {
+            "id": "desplanche",
+            "nom": "Vincent DESPLANCHE",
+            "type": "illustrateur",
+            "bio": "Illustrateur aux compositions dynamiques.",
+            "photo": "auteurs/desplanche.jpg"
+        },
+        {
+            "id": "duchesne",
+            "nom": "Séverine DUCHESNE",
+            "type": "autrice",
+            "bio": "Autrice de récits captivants pour la jeunesse.",
+            "photo": "auteurs/duchesne.jpg"
+        },
+        {
+            "id": "morgenstern",
+            "nom": "Susie MORGENSTERN",
+            "type": "autrice",
+            "bio": "Autrice prolifique et talentueuse.",
+            "photo": "auteurs/morgenstern.jpg"
+        }
+    ]
+}
