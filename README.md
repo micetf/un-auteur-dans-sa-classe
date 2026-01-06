@@ -46,16 +46,16 @@ Application web interactive **"Un auteur dans sa classe"** permettant aux classe
 
 1. **Lionel TARCHALA** - Illustrateur
 2. **Xavière BRONCARD** - Illustratrice
-3. **Clémentine VAQUEZ** - Illustratrice
-4. **Philippe JALBERT** - Auteur/Illustrateur
-5. **Nathalie BONBON** - Autrice
+3. **Pierre VAQUEZ** - Illustrateur
+4. **Delphine BALME** - Illustratrice
+5. **Cécile BONBON** - Illustratrice
 6. **Nathalie DIETERLE** - Illustratrice
-7. **Marion JACOUD** - Illustratrice
-8. **Hervé LE GOFF** - Illustrateur
-9. **Cécile POLLET** - Autrice/Illustratrice
-10. **Séverine LAFOND** - Autrice
-11. **Charlotte DESPLANCHE** - Autrice
-12. **Christelle DUCHESNE** - Autrice
+7. **Cécile JACOUD** - Illustratrice
+8. **Theresa BRONN** - Illustratrice
+9. **Clémence POLLET** - Illustratrice
+10. **Marie-Hélène LAFOND** - Autrice
+11. **Vincent DESPLANCHE** - Illustrateur
+12. **Séverine DUCHESNE** - Autrice
 13. **Susie MORGENSTERN** - Autrice
 
 ---
@@ -68,6 +68,14 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 **Objectif :** Observer une illustration et répondre à une question
 
+**Fonctionnement :**
+
+- Une grande image de l'auteur/illustrateur est affichée à gauche (60% de l'écran)
+- 3 propositions de réponse sont présentées à droite (40% de l'écran)
+- Les élèves discutent collectivement puis votent
+- L'enseignant clique sur la proposition choisie
+- Un feedback immédiat apparaît avec une explication pédagogique
+
 **État : ✅ IMPLÉMENTÉ**
 
 ---
@@ -76,6 +84,15 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 **Objectif :** Identifier l'élément qui ne correspond pas aux autres
 
+**Fonctionnement :**
+
+- 3 ou 4 vignettes sont affichées en grille (adaptative selon le nombre)
+- Chaque vignette occupe un grand espace (33% ou 50% de l'écran)
+- Les élèves observent et discutent collectivement
+- Ils doivent identifier l'intrus et justifier leur choix
+- L'enseignant clique sur la vignette choisie
+- L'intrus s'agrandit avec un badge 🎯 et une explication apparaît
+
 **État : ✅ IMPLÉMENTÉ**
 
 ---
@@ -83,6 +100,16 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 ### 3. "Je lis une image" 📖
 
 **Objectif :** Analyser une illustration en profondeur avec plusieurs questions successives
+
+**Fonctionnement :**
+
+- Une grande illustration occupe 60% de l'écran (gauche)
+- Une série de 2-3 questions sont posées successivement (40% droite)
+- Les élèves répondent à chaque question avant de passer à la suivante
+- Bouton "Question suivante" pour progresser
+- Chaque question peut avoir des options de réponse (images ou mots)
+- Barre de progression affichant la question courante
+- Feedback pédagogique après chaque réponse
 
 **État : ✅ IMPLÉMENTÉ**
 
@@ -96,7 +123,6 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - Affichage plein écran d'une consigne créative
 - Une image de référence (optionnelle) peut accompagner la consigne
-- **Modale d'agrandissement** : Clic sur l'image → affichage en grand pour analyse détaillée
 - Pas d'interaction : l'activité se fait hors écran (dessin, écriture, oral)
 - Durée : 5-10 minutes de création
 - Retour possible en classe : exposition des productions
@@ -164,7 +190,6 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - [x] Composant `JeuIntrus.jsx` (design optimisé plein écran)
 - [x] Composant `VignetteIntrus.jsx` (grandes vignettes)
-- [x] Composant `PhotoAuteur.jsx` (réutilisé du module 3)
 - [x] Layout adaptatif (3 vignettes = ligne, 4 vignettes = grille 2×2)
 - [x] Grandes vignettes occupant 95% de l'espace vertical
 - [x] Vue split-screen après sélection (50/50)
@@ -197,9 +222,8 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 **Statut : 100% complet**
 
 - [x] Composant `LectureImage.jsx`
-- [x] Gestion état currentQuestion (useState)
-- [x] Navigation entre questions
 - [x] Composant `QuestionLecture.jsx`
+- [x] Gestion navigation entre questions
 - [x] Support options avec images ou texte
 - [x] Affichage feedback par question
 - [x] Bouton "Question suivante"
@@ -218,61 +242,41 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 - [x] Composant `DefiCreatif.jsx`
 - [x] Affichage consigne plein écran
 - [x] Support image de référence optionnelle
-- [x] **Modale d'agrandissement d'image** (clic sur image → vue plein écran)
 - [x] Affichage durée estimée
 - [x] Affichage matériel nécessaire
-- [x] Design épuré et lisible avec scroll interne optimisé
+- [x] Design épuré et lisible
 - [x] Intégration dans App.jsx (type 'defi')
 - [x] Variantes par cycle affichées dans aide
-- [x] Thème visuel distinct (amber/orange)
-
-**Fonctionnalités clés :**
-
-- Layout avec scroll interne pour visibilité complète du contenu
-- Image cliquable avec indicateurs visuels (hover, bordure, icône 🔍)
-- Modale plein écran pour analyse détaillée de l'exemple
-- Fermeture intuitive (clic dehors, bouton ✕, touche Escape)
-- Accessibilité complète (ARIA, navigation clavier)
 
 ---
 
-### ⏳ Modules en cours / à faire (1/8)
+#### Module 8 : Intégration finale ⏳
 
-#### Module 8 : Intégration finale et polish ⏳
-
-**Statut : 75% - En cours**
+**Statut : 80% complet**
 
 **✅ Déjà fait :**
 
 - [x] Router de base dans App.jsx (state-based)
 - [x] Navigation retour accueil
-- [x] Chargement dynamique quiz, intrus, lecture et défi
+- [x] Chargement dynamique des 4 types d'activités
 - [x] Gestion états loading/error
 - [x] PropTypes sur tous les composants
 - [x] Design plein écran sans scroll
 
 **⏳ À faire :**
 
-- [ ] Transitions animées entre vues (Framer Motion ?)
-- [ ] Écran de chargement amélioré
-- [ ] Gestion d'erreur robuste (images manquantes, JSON invalide)
-- [ ] Tests finaux tous types d'activités
-- [ ] Optimisation performances (lazy loading composants)
-- [ ] Validation accessibilité complète (WCAG AA)
+- [ ] Transitions animées entre vues
 - [ ] Tests sur vidéoprojecteur réel
-- [ ] Ajustements tailles police si nécessaire
+- [ ] Validation accessibilité complète (WCAG AA)
+- [ ] Optimisation performances (lazy loading)
 - [ ] Documentation utilisateur enseignants
-
-**Complexité estimée :** Moyenne  
-**Temps estimé :** 4-6 heures  
-**Priorité :** Haute (finalisation avant prod)
 
 ---
 
 ### 📈 Progression globale
 
 ```
-████████████████████░░  87.5% (7/8 modules)
+██████████████████░░  87% (7/8 modules techniques)
 
 Détail par module :
 ✅ Module 1 : Fondations                    [████████████████████] 100%
@@ -282,42 +286,42 @@ Détail par module :
 ✅ Module 5 : Mode développement            [████████████████████] 100%
 ✅ Module 6 : "Je lis une image"            [████████████████████] 100%
 ✅ Module 7 : Micro-défi créatif            [████████████████████] 100%
-⏳ Module 8 : Intégration finale            [███████████████░░░░░]  75%
+⏳ Module 8 : Intégration finale            [████████████████░░░░]  80%
 ```
 
-**Estimation pour finalisation :**
+**Contenu pédagogique :**
 
-- Module 8 : 4-6 heures
-- **Total : 4-6 heures de développement**
+```
+████░░░░░░░░░░░░░░░░  8% (4/48 activités)
+
+Activités validées :
+✅ 2026-01-15 (J-100) : Quiz visuel - Lionel TARCHALA
+   "Baratchik Poutrak" - Famille d'ours polaires / réchauffement climatique
+
+✅ 2026-01-16 (J-99) : Jeu de l'intrus - Xavière BRONCARD
+   Couleurs chaudes et vives vs noir et blanc
+
+✅ 2026-01-19 (J-96) : Lecture d'image - Pierre VAQUEZ
+   "Charlie's Follies" - Atelier, contrastes lumière/ombre, technique manière noire
+
+✅ 2026-01-20 (J-95) : Défi créatif - Delphine BALME
+   Objet du quotidien, formes simples, 2-3 couleurs douces
+
+À créer : 44 activités (11 par type)
+```
 
 ---
 
-### 🎯 Prochaines étapes immédiates
+### 🎯 Prochaines étapes
 
-**Sprint 1 : Contenu (20h)**
+**Sprint 1 : Activités janvier** (6 activités)
 
-1. Rédiger les 48 activités (15h)
+- Dates : 22, 23, 26, 27, 29, 30 janvier
+- Répartition : 2 quiz + 2 intrus + 1 lecture + 1 défi
 
-    - 12 quiz visuels
-    - 12 jeux de l'intrus
-    - 12 lectures d'images
-    - 12 défis créatifs
-
-2. Collecter/créer les images (5h)
-    - 13 photos auteurs
-    - Images pour les 48 activités
-
-**Sprint 2 : Finalisation (6h)**
-
-3. Intégration et tests (3h)
-
-    - Tests sur vidéoprojecteur
-    - Ajustements design
-
-4. Polish et déploiement (3h)
-    - Animations transitions
-    - Optimisations performances
-    - Déploiement sur micetf.fr
+**Sprint 2 : Activités février** (8 activités)  
+**Sprint 3 : Activités mars** (18 activités)  
+**Sprint 4 : Activités avril** (6 activités)
 
 ---
 

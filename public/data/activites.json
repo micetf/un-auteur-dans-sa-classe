@@ -5,36 +5,33 @@
             "type": "quiz",
             "titre": "Bienvenue dans l'univers de Lionel TARCHALA",
             "auteurId": "tarchala",
-            "consigneEnseignant": "Première activité pour lancer le compte à rebours ! Faites observer l'image et laissez les élèves s'exprimer sur ce que ressent le personnage avant de proposer les choix.",
-            "consigneEleves": "Observez bien cette illustration. Que ressent le personnage principal ?",
+            "consigneEnseignant": "Première activité pour lancer le compte à rebours ! Cette image issue de 'Baratchik Poutrak' montre une famille d'ours polaires sur un glaçon qui fond. Laissez d'abord les élèves observer librement pendant 30 secondes. Demandez-leur : 'Que voyez-vous ?' puis 'Où sont ces ours polaires ?'. Faites remarquer la taille du glaçon, l'eau tout autour, les couleurs douces. Cette image permet d'introduire le thème du réchauffement climatique avec sensibilité. Lionel TARCHALA utilise l'aquarelle avec des teintes bleu-gris pour créer une atmosphère à la fois douce et mélancolique.",
+            "consigneEleves": "Observe bien cette illustration de Lionel TARCHALA. Que se passe-t-il pour cette famille d'ours polaires ?",
             "image": "/images/activites/2026-01-15/image-principale.jpg",
             "propositions": [
                 {
                     "id": "a",
-                    "texte": "Il est très en colère",
-                    "image": "/images/activites/2026-01-15/proposition-a.jpg",
+                    "texte": "Ils jouent sur un grand iceberg très solide",
                     "correct": false,
-                    "commentaire": "Regarde bien son visage et sa posture : voit-on vraiment des signes de colère (sourcils froncés, bouche crispée) ?"
+                    "commentaire": "Regarde bien la taille du glaçon : il est petit et semble fragile. L'eau monte tout autour. Ce n'est pas un grand iceberg solide."
                 },
                 {
                     "id": "b",
-                    "texte": "Il a l’air triste ou inquiet",
-                    "image": "/images/activites/2026-01-15/proposition-b.jpg",
+                    "texte": "Leur glaçon est en train de fondre dans l'océan",
                     "correct": true,
-                    "commentaire": "Bravo ! On peut deviner sa tristesse ou son inquiétude grâce à son expression et à la situation dans laquelle il se trouve."
+                    "commentaire": "Bravo ! Tu as bien observé : le glaçon est petit, l'eau l'entoure de tous les côtés. Lionel TARCHALA utilise des couleurs douces (bleu-gris) pour nous faire réfléchir sur le réchauffement climatique. Les ours polaires perdent leur habitat quand la glace fond."
                 },
                 {
                     "id": "c",
-                    "texte": "Il rit aux éclats",
-                    "image": "/images/activites/2026-01-15/proposition-c.jpg",
+                    "texte": "Ils se reposent tranquillement sur la plage",
                     "correct": false,
-                    "commentaire": "Ici, on ne voit pas vraiment un grand sourire ni des signes de joie."
+                    "commentaire": "Non, ce n'est pas une plage avec du sable. C'est bien de la glace qui flotte sur l'océan. Les ours polaires vivent dans les régions glacées, pas sur les plages."
                 }
             ],
             "adaptations": {
-                "maternelle": "Privilégiez l’oral : proposez les émotions à l’oral en pointant chaque image et en reformulant avec les mots des élèves.",
-                "cycle2": "Les élèves peuvent lire les propositions, entourer celle qu’ils choisissent et expliquer avec leurs mots ce qui, dans l’image, leur fait penser à cette émotion.",
-                "cycle3": "Demandez aux élèves de justifier leur choix en s’appuyant sur des détails précis de l’illustration (regard, bouche, position du corps, décor, couleurs)."
+                "maternelle": "Privilégiez l'observation orale. Pointez les éléments : 'Montrez-moi les ours. Combien sont-ils ? Montrez-moi l'eau. Le glaçon est-il grand ou petit ?' Reformulez simplement : 'Le glaçon fond, il devient de plus en plus petit'. Vous pouvez mimer avec vos mains un glaçon qui rétrécit.",
+                "cycle2": "Les élèves peuvent lire les propositions. Après la réponse, demandez : 'Pourquoi le glaçon fond ?' → introduire simplement le réchauffement climatique : 'Quand il fait trop chaud, la glace fond'. Faites nommer les couleurs utilisées (bleu, gris, blanc) et leur effet (calme, froid, tristesse).",
+                "cycle3": "Analysez la technique d'illustration : aquarelle, couleurs en dégradé, atmosphère douce malgré un sujet grave. Discutez du message de l'album : comment Lionel TARCHALA nous fait réfléchir sur l'environnement sans être moralisateur ? Observez la composition : les ours au centre, l'immensité de l'océan qui les entoure (sentiment de fragilité, d'isolement)."
             }
         },
         {
@@ -42,44 +39,44 @@
             "type": "intrus",
             "titre": "L'intrus de Xavière BRONCARD",
             "auteurId": "broncard",
-            "consigneEnseignant": "Laissez les élèves observer les vignettes. Demandez-leur ce qu'ils voient avant de leur demander de trouver l'intrus. Encouragez-les à justifier leur choix.",
+            "consigneEnseignant": "Cette activité permet de découvrir le style coloré et joyeux de Xavière BRONCARD. Les 4 vignettes présentent des couvertures d'albums : 3 utilisent des couleurs CHAUDES et VIVES (jaune, orange, rouge, vert), 1 est en NOIR ET BLANC. Le critère de l'intrus est OBJECTIF et facilement identifiable, même pour les plus jeunes. Laissez d'abord les élèves observer les 4 images pendant 30-45 secondes SANS rien dire. Puis demandez : 'Qu'est-ce que vous remarquez ? Qu'est-ce qui est pareil ? Qu'est-ce qui est différent ?' Notez leurs observations au tableau. Ensuite seulement, posez la question : 'Laquelle est l'intrus ?' Encouragez les élèves à justifier leur choix en s'appuyant sur des éléments visuels précis (présence/absence de couleurs, types de couleurs utilisées). Cette activité permet d'introduire le vocabulaire des couleurs chaudes et d'observer comment les illustrateurs créent des ambiances différentes selon leur palette.",
             "consigneEleves": "Laquelle de ces images est l'intrus ?",
             "vignettes": [
                 {
                     "id": "1",
                     "image": "/images/activites/2026-01-16/vignette-1.jpg",
-                    "titre": "Vignette 1",
+                    "titre": "Papiraconte",
                     "isIntrus": false,
-                    "explication": "Cette illustration utilise des couleurs chaudes et lumineuses (rose, orange, jaune), typiques du style joyeux de Xavière BRONCARD."
+                    "explication": "Cette illustration utilise des couleurs CHAUDES et VIVES : jaune éclatant, orange lumineux, vert tendre. Ce sont des couleurs joyeuses et ensoleillées que Xavière BRONCARD aime utiliser pour créer des ambiances douces et accueillantes. Ces couleurs donnent une impression de chaleur et de bonne humeur."
                 },
                 {
                     "id": "2",
                     "image": "/images/activites/2026-01-16/vignette-2.jpg",
-                    "titre": "Vignette 2",
+                    "titre": "Charlie's Follies",
                     "isIntrus": true,
-                    "explication": "Bravo ! C'est l'intrus. Cette image est en noir et blanc (ou en tons de bleu/gris froids). Toutes les autres utilisent des couleurs chaudes et vives qui donnent une impression de joie et de douceur."
+                    "explication": "Bravo ! C'est l'intrus ! Cette image est en NOIR ET BLANC (ou en nuances de gris). Elle ne contient AUCUNE couleur chaude ou vive comme les trois autres. C'est une illustration de Pierre VAQUEZ, pas de Xavière BRONCARD. Les deux illustrateurs ont des styles très différents : Pierre VAQUEZ utilise le noir et blanc pour créer une atmosphère poétique et mystérieuse, tandis que Xavière BRONCARD préfère les couleurs vives et chaleureuses pour des ambiances joyeuses."
                 },
                 {
                     "id": "3",
                     "image": "/images/activites/2026-01-16/vignette-3.jpg",
-                    "titre": "Vignette 3",
+                    "titre": "Kuomboka",
                     "isIntrus": false,
-                    "explication": "On retrouve ici les teintes chaudes (rouge, jaune, rose) que Xavière BRONCARD privilégie pour créer des ambiances douces et accueillantes."
+                    "explication": "Cette illustration utilise aussi des couleurs CHAUDES et VIVES : orange intense, rouge vif, ocre (jaune-brun), et un peu de turquoise pour contraster. Xavière BRONCARD aime mélanger les couleurs chaudes pour créer des scènes vibrantes et pleines de vie. Ici, les couleurs rappellent la chaleur de l'Afrique où se déroule l'histoire."
                 },
                 {
                     "id": "4",
                     "image": "/images/activites/2026-01-16/vignette-4.jpg",
-                    "titre": "Vignette 4",
+                    "titre": "Les petits pas perdus",
                     "isIntrus": false,
-                    "explication": "Cette illustration présente aussi une palette de couleurs vives et chaleureuses, caractéristique du travail de Xavière BRONCARD."
+                    "explication": "Cette illustration présente également une palette de couleurs CHAUDES et VIVES : rouge vif, orange lumineux, vert tendre, violet. Xavière BRONCARD crée ici une ambiance colorée et dynamique. Même si le violet peut sembler plus froid, il est associé à des couleurs chaudes (rouge, orange) qui dominent l'image et créent une atmosphère joyeuse et vivante."
                 }
             ],
             "adaptations": {
-                "maternelle": "Guidez les élèves avec des questions simples : 'Montrez-moi l'image qui est différente. Pourquoi ?' Acceptez toute justification qui montre qu'ils ont observé une différence (couleur, personnage, ambiance).",
+                "maternelle": "Guidez les élèves avec des questions très simples et concrètes :\n\n**Phase 1 - Observation libre (1 min) :**\n'Regardez bien les quatre images. Qu'est-ce que vous voyez ?'\n→ Acceptez toutes les réponses (personnages, animaux, couleurs...)\n\n**Phase 2 - Pointage guidé (2 min) :**\nPointez chaque image une par une :\n- Image 1 : 'Quelles couleurs vous voyez ici ?' (jaune, orange, vert)\n- Image 2 : 'Et là, quelles couleurs ?' (noir, blanc, gris)\n- Image 3 : 'Et ici ?' (orange, rouge, marron)\n- Image 4 : 'Et dans celle-là ?' (rouge, orange, vert, violet)\n\n**Phase 3 - Identification (1 min) :**\n'Montrez-moi l'image qui est différente des autres. Laquelle n'a pas de couleurs ?'\n→ Les élèves pointent l'image 2\n\n**Phase 4 - Validation (1 min) :**\n'Oui ! Cette image est en noir et blanc. Elle n'a pas de couleurs comme les autres. C'est l'intrus !'\n\n**Prolongement possible :**\nDemandez aux élèves de trier des images de magazines : 'Mets d'un côté les images avec beaucoup de couleurs, de l'autre côté les images en noir et blanc.'",
 
-                "cycle2": "Après avoir trouvé l'intrus collectivement, demandez : 'Qu'est-ce qui rend cette image différente des autres ?' Notez les critères proposés au tableau (technique, couleurs, personnages). Demandez ensuite de vérifier si ce critère fonctionne pour toutes les autres images.",
+                "cycle2": "Suivez cette démarche d'observation progressive :\n\n**Phase 1 - Observation individuelle silencieuse (1 min) :**\n'Regardez les 4 images sans parler. Cherchez ce qui est pareil et ce qui est différent.'\n\n**Phase 2 - Mise en commun collective (3 min) :**\nNotez au tableau en deux colonnes :\n\n```\nCe qui est PAREIL                Ce qui est DIFFÉRENT\n- Des personnages               - Image 2 = noir et blanc\n- Des histoires                 - Images 1, 3, 4 = couleurs\n- Des livres                    - Personnages différents\n```\n\n**Phase 3 - Identification de l'intrus (2 min) :**\n'D'après vos observations, quelle image est l'intrus ? Pourquoi ?'\n→ Les élèves doivent justifier : 'C'est l'image 2 parce qu'elle est en noir et blanc'\n\n**Phase 4 - Introduction du vocabulaire 'couleurs chaudes' (2 min) :**\nAprès avoir trouvé l'intrus, demandez :\n'Quelles couleurs voyez-vous dans les images 1, 3 et 4 ?'\n→ Listez : jaune, orange, rouge, vert\n\n'Ces couleurs s'appellent des couleurs CHAUDES. Pourquoi à votre avis ?'\n→ Elles rappellent le soleil, le feu, la chaleur\n\n'L'illustratrice Xavière BRONCARD adore utiliser ces couleurs chaudes pour créer des images joyeuses et pleines de vie.'\n\n**Phase 5 - Vérification avec le critère (1 min) :**\n'Est-ce que notre critère fonctionne pour TOUTES les autres images ?'\n→ Vérifiez une par une : image 1 a des couleurs chaudes ✓, image 3 a des couleurs chaudes ✓, image 4 a des couleurs chaudes ✓\n\n**Prolongement possible :**\nProposez une activité de tri : distribuer des reproductions de tableaux ou d'illustrations et demander de les classer en 'couleurs chaudes' / 'couleurs froides' / 'noir et blanc'.",
 
-                "cycle3": "Proposez une démarche d'analyse comparative : 1) Observer chaque image individuellement (technique, palette, sujet, composition). 2) Identifier les points communs entre 3 images. 3) Déduire l'intrus par élimination. 4) Formuler une justification précise avec le vocabulaire technique approprié (aquarelle/numérique, tons chauds/froids, fantastique/réaliste)."
+                "cycle3": "Proposez une démarche d'analyse comparative approfondie :\n\n**Phase 1 - Observation individuelle avec prise de notes (2 min) :**\n'Observez les 4 images. Pour chacune, notez rapidement sur votre ardoise ou cahier de brouillon : la technique utilisée, la palette de couleurs dominantes, le sujet, la composition.'\n\n**Phase 2 - Mise en commun par critères (4 min) :**\nAnalysez image par image en notant au tableau :\n\n```\nImage 1 (Papiraconte) :\n- Technique : dessin numérique / aplats de couleurs\n- Palette : jaune, orange, vert (CHAUDE)\n- Composition : personnages au premier plan\n\nImage 2 (Charlie's Follies) :\n- Technique : gravure / manière noire\n- Palette : noir, blanc, gris (MONOCHROME)\n- Composition : personnage isolé, jeu lumière/ombre\n\nImage 3 (Kuomboka) :\n- Technique : dessin / aplats de couleurs\n- Palette : orange, rouge, turquoise (CHAUDE dominante)\n- Composition : scène collective\n\nImage 4 (Les petits pas perdus) :\n- Technique : dessin / aplats de couleurs  \n- Palette : rouge, orange, vert, violet (CHAUDE dominante)\n- Composition : scène de groupe\n```\n\n**Phase 3 - Identification de l'intrus par élimination (2 min) :**\n'Identifiez les points communs entre 3 images, puis déduisez l'intrus.'\n\nPoints communs images 1, 3, 4 :\n- ✓ Technique dessin avec aplats\n- ✓ Couleurs vives et chaudes\n- ✓ Ambiance joyeuse\n\n→ Image 2 est l'intrus (technique gravure, noir et blanc, ambiance mystérieuse)\n\n**Phase 4 - Formulation de la justification avec vocabulaire technique (2 min) :**\n'Formulez une phrase complète expliquant pourquoi l'image 2 est l'intrus.'\n\nExemple attendu : 'L'image 2 est l'intrus car c'est la seule qui utilise une technique de gravure en noir et blanc, créant une atmosphère poétique et mystérieuse, alors que les trois autres utilisent des aplats de couleurs vives et chaudes pour créer des ambiances joyeuses et ensoleillées.'\n\n**Phase 5 - Analyse stylistique comparative (3 min) :**\n'Comparez les styles de Xavière BRONCARD (images 1, 3, 4) et Pierre VAQUEZ (image 2). Quels sont leurs points communs et leurs différences ?'\n\n```\nPoints communs :\n- Univers jeunesse\n- Qualité artistique élevée\n- Personnages expressifs\n\nDifférences :\n- BRONCARD : couleurs vives, ambiances joyeuses, dessin graphique\n- VAQUEZ : noir et blanc, ambiances poétiques/mélancoliques, gravure\n```\n\n**Prolongement Culture artistique :**\nRecherchez d'autres illustrateurs qui utilisent des styles radicalement différents : \n- Couleurs vives : Hervé Tullet, Beatrice Alemagna\n- Noir et blanc : Albertine, Shaun Tan\n- Introduisez la notion de 'patte graphique' : chaque illustrateur a son style reconnaissable."
             }
         },
         {
@@ -87,7 +84,7 @@
             "type": "lecture",
             "titre": "Charlie's Follies - L'univers de Pierre VAQUEZ",
             "auteurId": "vaquez",
-            "consigneEnseignant": "Cette activité permet de découvrir 'Charlie's Follies' et le style unique de Pierre VAQUEZ (gravure 'manière noire'). Laissez les élèves observer librement l'image pendant 30 secondes avant de commencer. Encouragez-les à identifier les contrastes, les jeux de lumière et l'atmosphère particulière créée par l'illustrateur. Les 3 questions guident progressivement du concret (observation du lieu et des objets) vers l'abstrait (ressenti et atmosphère).",
+            "consigneEnseignant": "Cette activité permet de découvrir 'Charlie's Follies' (Éditions Sarbacane, 2025) et le style unique de Pierre VAQUEZ (gravure 'manière noire'). AVANT de commencer les questions, laissez les élèves observer librement l'image pendant 30-45 secondes. Posez des questions ouvertes : 'Que voyez-vous ? Où se passe la scène ? Qui est ce personnage ?' Laissez-les s'exprimer librement. Les 3 questions guident ensuite progressivement du concret (observer le lieu et les objets) vers l'abstrait (comprendre l'activité de Charlie, puis ressentir l'atmosphère créée par l'illustrateur). Pour le Cycle 2, la Question 3 nécessite un étayage visuel fort : pointez physiquement les zones claires et sombres AVANT de proposer les réponses. Encouragez l'utilisation du vocabulaire 'clair/foncé' plutôt que les termes techniques.",
             "consigneEleves": "Observe bien cette illustration de Pierre VAQUEZ tirée de 'Charlie's Follies'",
             "image": "/images/activites/2026-01-19/illustration.jpg",
             "questions": [
@@ -153,28 +150,32 @@
                 }
             ],
             "adaptations": {
-                "maternelle": "Utilisez seulement les questions 1 et 2. Pour la question 1, pointez du doigt les différents éléments de l'atelier. Pour la question 2, montrez les machines et demandez : 'Pourquoi Charlie fait-il ça ?' Acceptez toutes les réponses qui montrent que Charlie aime créer.",
-                "cycle2": "Proposez les trois questions. Après la question 2, demandez oralement : 'Que ressent Charlie quand il crée ses machines ?' Pour la question 3, expliquez simplement qu'un contraste, c'est quand on voit à la fois des parties très sombres et des parties très claires.",
-                "cycle3": "Après les trois questions, prolongez avec : 'L'histoire nous dit que Charlie danse les claquettes de joie pour ses machines. À votre avis, pourquoi fait-il ça la nuit, quand personne ne le voit ?' Puis : 'Que va-t-il se passer quand Charlie vendra tous ses robots ?' Cela permet d'aborder les thèmes de la solitude, de la création artistique et du lien affectif avec ses œuvres."
+                "maternelle": "Utilisez seulement les questions 1 et 2. Pour la question 1, pointez du doigt les différents éléments de l'atelier : 'Montrez-moi les machines. Montrez-moi la fenêtre. Montrez-moi Charlie.' Pour la question 2, reformulez simplement : 'Charlie fabrique des machines avec des vieux objets'. Demandez oralement : 'Pourquoi Charlie fait-il ça ?' Acceptez toutes les réponses qui montrent que Charlie aime créer, inventer, bricoler.",
+
+                "cycle2": "Proposez les trois questions en suivant cette démarche progressive. AVANT la Question 3, faites un TEMPS D'ÉTAYAGE VISUEL obligatoire (2-3 minutes) :\n\n**Étape 1 - Pointage guidé :**\n- Pointez physiquement sur l'image projetée : 'Regardez ICI' (fenêtre), 'c'est très CLAIR, très lumineux'\n- Puis pointez : 'Et regardez LÀ' (premier plan, objets sombres), 'c'est très FONCÉ, très sombre'\n- Faites pointer aux élèves : 'Montrez-moi une zone très claire. Montrez-moi une zone très sombre.'\n\n**Étape 2 - Vocabulaire simple :**\nIntroduisez les mots 'CLAIR' et 'FONCÉ' (plutôt que 'lumière/ombre' ou 'contraste').\nDemandez : 'Qu'est-ce qui est CLAIR dans l'image ? Qu'est-ce qui est FONCÉ ?'\nNotez les réponses au tableau en deux colonnes : CLAIR (fenêtre, Charlie sous le projecteur) / FONCÉ (objets, murs, sol).\n\n**Étape 3 - Question de transition :**\n'Est-ce que tout est de la même couleur dans l'image, ou est-ce qu'il y a des différences ?'\n→ Attendez les réponses : 'Oui, il y a du très clair ET du très foncé'\n\n**Étape 4 - Reformulation de la Question 3 :**\nAu lieu de 'Comment Pierre VAQUEZ crée-t-il cette atmosphère spéciale ?', reformulez oralement :\n'Pierre VAQUEZ a fait quelque chose de spécial dans cette image. Est-ce qu'il a utilisé... ?'\nPuis lisez les 3 propositions en insistant sur les mots-clés :\n- A. 'des couleurs très VIVES et joyeuses' (montrez ce que serait du rouge vif, du jaune vif)\n- B. 'le CLAIR et le FONCÉ ensemble' (pointez à nouveau fenêtre vs objets)\n- C. 'des dessins très simples' (montrez que les objets ont beaucoup de détails)\n\n**Étape 5 - Validation collective :**\nLaissez les élèves voter. Demandez à 2-3 élèves de justifier : 'Pourquoi tu penses que c'est la réponse B ?'\nValidez en reformulant avec le vocabulaire technique : 'Vous avez raison ! On dit qu'il utilise des CONTRASTES entre le clair et le foncé. Contraste, ça veut dire : mélanger le très clair ET le très foncé pour créer une ambiance spéciale.'\n\n**Prolongement possible (si temps disponible) :**\nDemandez : 'Est-ce que cette image vous paraît joyeuse ou plutôt calme/mystérieuse ?' → Les couleurs sombres créent une atmosphère calme, un peu mystérieuse, comme si c'était la nuit.",
+
+                "cycle3": "Après les trois questions, prolongez avec une analyse plus poussée :\n\n**Question bonus 1 - Narrative :**\n'L'histoire nous dit que Charlie danse les claquettes de joie pour ses machines. À votre avis, pourquoi fait-il ça la nuit, quand personne ne le voit ?'\n→ Pistes de réflexion : timidité, plaisir solitaire de créer, monde secret\n\n**Question bonus 2 - Anticipation :**\n'Que va-t-il se passer quand Charlie vendra tous ses robots ?'\n→ Permet d'aborder les thèmes de la solitude, du lien affectif avec ses créations, du vide après la création\n\n**Approfondissement technique :**\nAnalysez la technique 'manière noire' : Pierre VAQUEZ grave sur une plaque de métal noircie, puis gratte pour faire apparaître la lumière. C'est l'inverse de la peinture (on enlève le noir au lieu d'ajouter de la couleur). Observez comment la lumière 'jaillit' du noir (fenêtre, projecteur sur Charlie).\n\n**Composition de l'image :**\n- Charlie au centre, sous un projecteur = personnage principal, isolé\n- Objets qui l'entourent = son univers créatif\n- Fenêtre en arrière-plan = lien fragile avec le monde extérieur\n- Contraste intérieur sombre / extérieur avec immeubles = opposition solitude/société\n\n**Référence cinématographique :**\nL'atmosphère rappelle le cinéma muet des années 1920-1930 (Charlie Chaplin, Buster Keaton) : personnage expressif, noir et blanc, jeu sur la lumière, poésie visuelle."
             }
         },
         {
             "date": "2026-01-20",
             "type": "defi",
-            "titre": "Un petit moment du quotidien à la manière de Delphine BALME",
+            "titre": "Un petit objet du quotidien à la manière de Delphine BALME",
             "auteurId": "balme",
-            "consigneEnseignant": "Delphine BALME illustre des petits moments simples de la vie (prendre un goûter, lire, se promener dehors) avec des couleurs douces et des formes simples. Montrez rapidement (1 minute) 1 ou 2 images où l’on voit une scène calme du quotidien (famille, nature, intérieur). Expliquez aux élèves qu’ils vont, en quelques traits, dessiner un petit moment de leur propre quotidien, en utilisant peu de détails mais en choisissant bien les couleurs. Pas de peinture pour garder un temps très court : uniquement crayons de couleur ou feutres fins.",
-            "consigneEleves": "Dessine un petit moment de ta vie de tous les jours que tu aimes bien (un goûter, un jeu, un moment dehors, un moment calme). Utilise des formes simples et 2 ou 3 couleurs douces pour montrer que c’est un moment agréable.",
-            "imageReference": "/images/activites/2026-01-20/exemple-quotidien-simple.jpg",
+            "consigneEnseignant": "Delphine BALME illustre des petits moments simples de la vie avec des formes épurées et des couleurs douces. Montrez le zoom sur la TROUSSE de l'image de référence (30 secondes). Faites observer : la forme simple (cylindre), les 2-3 couleurs (rose, jaune, vert), les quelques objets qui dépassent (crayon, règle). Expliquez : 'Vous allez dessiner VOTRE trousse ou un petit objet que vous aimez (votre doudou, votre livre préféré, votre goûter...) avec des formes simples et 2-3 couleurs, comme Delphine BALME.' Insistez : pas besoin de dessiner tout le détail, juste la FORME générale et les COULEURS. L'objectif est de créer une atmosphère douce, pas de faire du réalisme.",
+            "consigneEleves": "Dessine un petit objet de ta vie que tu aimes bien (ta trousse, ton doudou, ton goûter, ton livre préféré...). Utilise des formes simples et 2 ou 3 couleurs douces.",
+            "imageReference": "/images/activites/2026-01-20/zoom-trousse.jpg",
             "duree": 10,
             "materiel": [
                 "Demi-feuille A5 blanche (pré-découpée)",
-                "Crayons de couleur ou feutres fins (déjà répartis sur les tables)"
+                "Crayons de couleur ou feutres fins"
             ],
             "adaptations": {
-                "maternelle": "Montrez une image d’un moment simple (un goûter, une promenade) et nommez-le avec les élèves. Proposez une phrase orale support : « Je dessine un moment que j’aime ». Demandez-leur de commencer par une seule chose importante (la table, le soleil, le lit…) puis d’ajouter une personne ou un élément de nature. Aidez à formuler : « C’est quand je… » lors de la présentation.",
-                "cycle2": "Demandez aux élèves de choisir un moment précis (par exemple : « Quand je lis dans mon lit », « Quand je joue dehors », « Quand je prends le goûter »). Ils doivent le dessiner avec peu de détails mais en pensant à l’ambiance : choisir 2 ou 3 couleurs douces ou répétées. En fin de défi, chacun doit pouvoir nommer son moment en une phrase : « Mon petit moment du quotidien, c’est… ». Le défi : finir le dessin en 5–6 minutes pour garder 2–3 minutes de partage et de rangement.",
-                "cycle3": "Proposez de choisir un moment très simple mais qu’ils trouvent important (un moment seul ou en famille). Ils doivent le dessiner en allant à l’essentiel (grandes formes, peu de détails) et en choisissant une gamme de couleurs cohérente (par exemple plutôt chaud ou plutôt froid) pour l’ambiance, en référence à l’atmosphère douce des scènes de Delphine Balme. [web:2] En fin de défi, ils écrivent rapidement un titre en haut ou en bas de la feuille : « Un petit moment… » (par ex. « Un petit moment de lecture »)."
+                "maternelle": "Montrez le zoom de la trousse. Dites : 'Vous allez dessiner UN objet que vous aimez. Ça peut être votre trousse, votre doudou, votre livre préféré...' Aidez à démarrer : 'D'abord, tu dessines la FORME de ton objet (un rond, un carré, une forme allongée). Ensuite, tu mets UNE ou DEUX couleurs.' Circulez pour aider au démarrage (première forme). Temps : 8-10 minutes maximum. Lors du partage, chaque élève dit juste : 'C'est mon/ma...'",
+
+                "cycle2": "Montrez le zoom sur la trousse et décrivez : 'Regardez, Delphine BALME a dessiné une trousse avec une forme simple (comme un tube), et elle a ajouté juste ce qui dépasse : un crayon, une règle. Elle a utilisé 2-3 couleurs : rose pour la trousse, jaune pour le crayon, vert pour la règle.' Demandez aux élèves de choisir UN objet de leur quotidien qu'ils aiment : trousse, doudou, goûter, livre, ballon... Ils doivent : 1) Dessiner la FORME simple de l'objet (3-4 min), 2) Ajouter 1-2 petits détails si besoin (1-2 min), 3) Mettre 2-3 couleurs (3 min). Défi temps : finir en 7-8 minutes pour garder 2 minutes de partage. Lors du partage : 'Mon petit objet du quotidien, c'est...'",
+
+                "cycle3": "Montrez le zoom sur la trousse et analysez le style : 'Delphine BALME utilise des FORMES GÉOMÉTRIQUES simples (cylindre pour la trousse, rectangle pour la règle) et des COULEURS DOUCES en nombre limité. Elle ne dessine pas tous les détails, juste l'essentiel pour qu'on reconnaisse l'objet et son ambiance.' Demandez aux élèves de choisir un petit objet de leur quotidien qui a du sens pour eux. Consigne précise : 1) Forme géométrique simple de base (cercle, carré, cylindre, rectangle), 2) 1-2 détails caractéristiques SEULEMENT, 3) Palette de 2-3 couleurs cohérente (plutôt tons chauds OU plutôt tons froids), 4) Un titre court en bas : 'Mon/ma...' Temps : 8 minutes de production, 2 minutes de partage. Critère de réussite : on doit reconnaître l'objet ET sentir qu'il est important pour son auteur (par le soin, les couleurs choisies)."
             }
         }
     ],
