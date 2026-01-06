@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Accueil from "@components/Accueil";
-import { QuizVisuel, JeuIntrus, LectureImage } from "@components/Activite";
+import {
+    QuizVisuel,
+    JeuIntrus,
+    LectureImage,
+    DefiCreatif,
+} from "@components/Activite";
 import { DevToolbar } from "@components/Dev";
 import { useDevMode } from "@hooks/useDevMode";
 import { getTodayISO } from "@utils/dateUtils";
@@ -198,8 +203,17 @@ function App() {
                         />
                     )}
 
-                    {/* Les autres types d'activités seront ajoutés dans les prochains modules */}
-                    {!["quiz", "intrus", "lecture"].includes(
+                    {/* Micro-défi créatif */}
+                    {activiteDuJour.type === "defi" && (
+                        <DefiCreatif
+                            activite={activiteDuJour}
+                            auteur={getAuteurActivite(activiteDuJour.auteurId)}
+                            onRetour={handleRetourAccueil}
+                        />
+                    )}
+
+                    {/* Type non implémenté */}
+                    {!["quiz", "intrus", "lecture", "defi"].includes(
                         activiteDuJour.type
                     ) && (
                         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-orange-50">
@@ -208,8 +222,8 @@ function App() {
                                     Type d'activité : {activiteDuJour.type}
                                 </h1>
                                 <p className="text-3xl text-gray-700 mb-12">
-                                    Ce type d'activité sera disponible dans un
-                                    prochain module.
+                                    Ce type d'activité n'est pas encore
+                                    implémenté.
                                 </p>
                                 <button
                                     onClick={handleRetourAccueil}

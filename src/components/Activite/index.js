@@ -15,3 +15,6 @@ export { default as VignetteIntrus } from "./VignetteIntrus";
 // Composants pour "Je lis une image"
 export { default as LectureImage } from "./LectureImage";
 export { default as QuestionLecture } from "./QuestionLecture";
+
+// Composant pour le défi créatif
+export { default as DefiCreatif } from "./DefiCreatif";

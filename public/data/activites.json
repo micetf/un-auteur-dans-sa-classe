@@ -157,6 +157,25 @@
                 "cycle2": "Proposez les trois questions. Après la question 2, demandez oralement : 'Que ressent Charlie quand il crée ses machines ?' Pour la question 3, expliquez simplement qu'un contraste, c'est quand on voit à la fois des parties très sombres et des parties très claires.",
                 "cycle3": "Après les trois questions, prolongez avec : 'L'histoire nous dit que Charlie danse les claquettes de joie pour ses machines. À votre avis, pourquoi fait-il ça la nuit, quand personne ne le voit ?' Puis : 'Que va-t-il se passer quand Charlie vendra tous ses robots ?' Cela permet d'aborder les thèmes de la solitude, de la création artistique et du lien affectif avec ses œuvres."
             }
+        },
+        {
+            "date": "2026-01-20",
+            "type": "defi",
+            "titre": "Un petit moment du quotidien à la manière de Delphine BALME",
+            "auteurId": "balme",
+            "consigneEnseignant": "Delphine BALME illustre des petits moments simples de la vie (prendre un goûter, lire, se promener dehors) avec des couleurs douces et des formes simples. Montrez rapidement (1 minute) 1 ou 2 images où l’on voit une scène calme du quotidien (famille, nature, intérieur). Expliquez aux élèves qu’ils vont, en quelques traits, dessiner un petit moment de leur propre quotidien, en utilisant peu de détails mais en choisissant bien les couleurs. Pas de peinture pour garder un temps très court : uniquement crayons de couleur ou feutres fins.",
+            "consigneEleves": "Dessine un petit moment de ta vie de tous les jours que tu aimes bien (un goûter, un jeu, un moment dehors, un moment calme). Utilise des formes simples et 2 ou 3 couleurs douces pour montrer que c’est un moment agréable.",
+            "imageReference": "/images/activites/2026-01-20/exemple-quotidien-simple.jpg",
+            "duree": 10,
+            "materiel": [
+                "Demi-feuille A5 blanche (pré-découpée)",
+                "Crayons de couleur ou feutres fins (déjà répartis sur les tables)"
+            ],
+            "adaptations": {
+                "maternelle": "Montrez une image d’un moment simple (un goûter, une promenade) et nommez-le avec les élèves. Proposez une phrase orale support : « Je dessine un moment que j’aime ». Demandez-leur de commencer par une seule chose importante (la table, le soleil, le lit…) puis d’ajouter une personne ou un élément de nature. Aidez à formuler : « C’est quand je… » lors de la présentation.",
+                "cycle2": "Demandez aux élèves de choisir un moment précis (par exemple : « Quand je lis dans mon lit », « Quand je joue dehors », « Quand je prends le goûter »). Ils doivent le dessiner avec peu de détails mais en pensant à l’ambiance : choisir 2 ou 3 couleurs douces ou répétées. En fin de défi, chacun doit pouvoir nommer son moment en une phrase : « Mon petit moment du quotidien, c’est… ». Le défi : finir le dessin en 5–6 minutes pour garder 2–3 minutes de partage et de rangement.",
+                "cycle3": "Proposez de choisir un moment très simple mais qu’ils trouvent important (un moment seul ou en famille). Ils doivent le dessiner en allant à l’essentiel (grandes formes, peu de détails) et en choisissant une gamme de couleurs cohérente (par exemple plutôt chaud ou plutôt froid) pour l’ambiance, en référence à l’atmosphère douce des scènes de Delphine Balme. [web:2] En fin de défi, ils écrivent rapidement un titre en haut ou en bas de la feuille : « Un petit moment… » (par ex. « Un petit moment de lecture »)."
+            }
         }
     ],
     "datesActivites": [
