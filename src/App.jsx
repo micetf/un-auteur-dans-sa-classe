@@ -25,6 +25,9 @@ function App() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Base normalisée (sans double //)
+    const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
     // Hooks pour les modes de prévisualisation
     const devMode = useDevMode();
     const urlPreview = useUrlPreview(config?.dateSalon, ENABLE_URL_PREVIEW);
@@ -50,7 +53,7 @@ function App() {
         const loadData = async () => {
             try {
                 // Chargement de la configuration
-                const configResponse = await fetch("/data/config.json");
+                const configResponse = await fetch(`${BASE}/data/config.json`);
                 if (!configResponse.ok) {
                     throw new Error("Impossible de charger la configuration");
                 }
@@ -58,7 +61,9 @@ function App() {
                 setConfig(configData);
 
                 // Chargement des activités
-                const activitesResponse = await fetch("/data/activites.json");
+                const activitesResponse = await fetch(
+                    `${BASE}/data/activites.json`
+                );
                 if (!activitesResponse.ok) {
                     throw new Error("Impossible de charger les activités");
                 }
@@ -74,7 +79,7 @@ function App() {
         };
 
         loadData();
-    }, []);
+    }, [BASE]);
 
     // Gestionnaire de clic sur le bouton d'activité
     const handleActiviteClick = () => {
@@ -107,6 +112,32 @@ function App() {
         if (!config || !auteurId) return null;
         return config.auteurs.find((a) => a.id === auteurId);
     };
+
+    // Prépare une activité avec URLs d'images corrigées par BASE
+    const getActiviteAvecUrls = (activite) => {
+        if (!activite) return null;
+
+        const prefix = BASE; // déjà sans slash final
+
+        const withImage = (imgPath) =>
+            imgPath
+                ? `${prefix}${imgPath.startsWith("/") ? "" : "/"}${imgPath}`
+                : imgPath;
+
+        return {
+            ...activite,
+            image: withImage(activite.image),
+            imageReference: withImage(activite.imageReference),
+            vignettes: activite.vignettes
+                ? activite.vignettes.map((v) => ({
+                      ...v,
+                      image: withImage(v.image),
+                  }))
+                : activite.vignettes,
+        };
+    };
+
+    const activiteCorrigee = getActiviteAvecUrls(activiteDuJour);
 
     // Affichage du chargement
     if (isLoading) {
@@ -266,47 +297,47 @@ function App() {
                     />
                 )}
 
-                {currentView === "activite" && activiteDuJour && (
+                {currentView === "activite" && activiteCorrigee && (
                     <>
                         {/* Quiz visuel */}
-                        {activiteDuJour.type === "quiz" && (
+                        {activiteCorrigee.type === "quiz" && (
                             <QuizVisuel
-                                activite={activiteDuJour}
+                                activite={activiteCorrigee}
                                 auteur={getAuteurActivite(
-                                    activiteDuJour.auteurId
+                                    activiteCorrigee.auteurId
                                 )}
                                 onRetour={handleRetourAccueil}
                             />
                         )}
 
                         {/* Jeu de l'intrus */}
-                        {activiteDuJour.type === "intrus" && (
+                        {activiteCorrigee.type === "intrus" && (
                             <JeuIntrus
-                                activite={activiteDuJour}
+                                activite={activiteCorrigee}
                                 auteur={getAuteurActivite(
-                                    activiteDuJour.auteurId
+                                    activiteCorrigee.auteurId
                                 )}
                                 onRetour={handleRetourAccueil}
                             />
                         )}
 
                         {/* Je lis une image */}
-                        {activiteDuJour.type === "lecture" && (
+                        {activiteCorrigee.type === "lecture" && (
                             <LectureImage
-                                activite={activiteDuJour}
+                                activite={activiteCorrigee}
                                 auteur={getAuteurActivite(
-                                    activiteDuJour.auteurId
+                                    activiteCorrigee.auteurId
                                 )}
                                 onRetour={handleRetourAccueil}
                             />
                         )}
 
                         {/* Micro-défi créatif */}
-                        {activiteDuJour.type === "defi" && (
+                        {activiteCorrigee.type === "defi" && (
                             <DefiCreatif
-                                activite={activiteDuJour}
+                                activite={activiteCorrigee}
                                 auteur={getAuteurActivite(
-                                    activiteDuJour.auteurId
+                                    activiteCorrigee.auteurId
                                 )}
                                 onRetour={handleRetourAccueil}
                             />
@@ -314,12 +345,13 @@ function App() {
 
                         {/* Type non implémenté */}
                         {!["quiz", "intrus", "lecture", "defi"].includes(
-                            activiteDuJour.type
+                            activiteCorrigee.type
                         ) && (
                             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-orange-50">
                                 <div className="text-center max-w-2xl p-12">
                                     <h1 className="text-6xl font-bold text-primary mb-8">
-                                        Type d'activité : {activiteDuJour.type}
+                                        Type d'activité :{" "}
+                                        {activiteCorrigee.type}
                                     </h1>
                                     <p className="text-3xl text-gray-700 mb-12">
                                         Ce type d'activité n'est pas encore
