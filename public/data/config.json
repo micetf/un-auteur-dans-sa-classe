@@ -31,7 +31,8 @@
             "type": "illustrateur",
             "voteCE2": true,
             "bio": "Illustrateur au trait délicat et poétique.",
-            "photo": "images/auteurs/vaquez.jpg"
+            "photo": "images/auteurs/vaquez.jpg",
+            "source": "https://editions-sarbacane.com/auteurs/pierre-vaquez"
         },
         {
             "id": "balme",
