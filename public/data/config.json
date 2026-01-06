@@ -40,7 +40,8 @@
             "type": "illustratrice",
             "voteCE2": true,
             "bio": "Illustratrice aux personnages expressifs.",
-            "photo": "images/auteurs/balme.jpg"
+            "photo": "images/auteurs/balme.jpg",
+            "source": "https://www.delphinebalme.com/a-propos"
         },
         {
             "id": "bonbon",

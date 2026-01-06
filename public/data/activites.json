@@ -50,34 +50,36 @@
                     "image": "/images/activites/2026-01-16/vignette-1.jpg",
                     "titre": "Vignette 1",
                     "isIntrus": false,
-                    "explication": "Cette image n'est pas l'intrus. Elle partage le même univers coloré que les autres."
+                    "explication": "Cette illustration utilise des couleurs chaudes et lumineuses (rose, orange, jaune), typiques du style joyeux de Xavière BRONCARD."
                 },
                 {
                     "id": "2",
                     "image": "/images/activites/2026-01-16/vignette-2.jpg",
                     "titre": "Vignette 2",
                     "isIntrus": true,
-                    "explication": "Bravo ! C'est bien l'intrus. Cette image a un style réaliste alors que les autres sont dans un style fantastique typique de Xavière BRONCARD."
+                    "explication": "Bravo ! C'est l'intrus. Cette image est en noir et blanc (ou en tons de bleu/gris froids). Toutes les autres utilisent des couleurs chaudes et vives qui donnent une impression de joie et de douceur."
                 },
                 {
                     "id": "3",
                     "image": "/images/activites/2026-01-16/vignette-3.jpg",
                     "titre": "Vignette 3",
                     "isIntrus": false,
-                    "explication": "Cette image n'est pas l'intrus. Elle utilise les mêmes couleurs vives caractéristiques."
+                    "explication": "On retrouve ici les teintes chaudes (rouge, jaune, rose) que Xavière BRONCARD privilégie pour créer des ambiances douces et accueillantes."
                 },
                 {
                     "id": "4",
                     "image": "/images/activites/2026-01-16/vignette-4.jpg",
                     "titre": "Vignette 4",
                     "isIntrus": false,
-                    "explication": "Cette image n'est pas l'intrus. Elle fait bien partie de l'univers de l'illustratrice."
+                    "explication": "Cette illustration présente aussi une palette de couleurs vives et chaleureuses, caractéristique du travail de Xavière BRONCARD."
                 }
             ],
             "adaptations": {
-                "maternelle": "Laissez les élèves pointer du doigt et expliquer oralement ce qu'ils voient. Pas besoin de lire les titres.",
-                "cycle2": "Les élèves peuvent lire les titres et expliquer avec leurs propres mots pourquoi une image est l'intrus.",
-                "cycle3": "Demandez aux élèves d'identifier précisément les caractéristiques visuelles qui font de cette image un intrus (couleurs, style, technique, etc.)."
+                "maternelle": "Guidez les élèves avec des questions simples : 'Montrez-moi l'image qui est différente. Pourquoi ?' Acceptez toute justification qui montre qu'ils ont observé une différence (couleur, personnage, ambiance).",
+
+                "cycle2": "Après avoir trouvé l'intrus collectivement, demandez : 'Qu'est-ce qui rend cette image différente des autres ?' Notez les critères proposés au tableau (technique, couleurs, personnages). Demandez ensuite de vérifier si ce critère fonctionne pour toutes les autres images.",
+
+                "cycle3": "Proposez une démarche d'analyse comparative : 1) Observer chaque image individuellement (technique, palette, sujet, composition). 2) Identifier les points communs entre 3 images. 3) Déduire l'intrus par élimination. 4) Formuler une justification précise avec le vocabulaire technique approprié (aquarelle/numérique, tons chauds/froids, fantastique/réaliste)."
             }
         },
         {
