@@ -12,7 +12,7 @@
 - [Structure du projet](#structure-du-projet)
 - [Guide de développement](#guide-de-développement)
 - [Gestion des activités](#gestion-des-activités)
-- [Mode développement](#mode-développement)
+- [Modes de prévisualisation](#modes-de-prévisualisation)
 - [Déploiement](#déploiement)
 - [Contribution](#contribution)
 - [Troubleshooting](#troubleshooting)
@@ -144,10 +144,12 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 - [x] Hook `useCountdown` avec support J-100
 - [x] Hook `useActiviteDuJour`
 - [x] Hook `useDevMode`
+- [x] Hook `useUrlPreview` (paramètre URL)
 - [x] Utilitaires de dates (`dateUtils.js`)
 - [x] Structure de dossiers images créée (script automatique)
 - [x] Alias de chemins configurés (@, @components, @hooks, @utils)
 - [x] Palette de couleurs et tailles projection Tailwind
+- [x] Système de feature flags (`config/features.js`)
 
 ---
 
@@ -348,7 +350,7 @@ Development Tools
 2. **Design responsive** : Optimisé pour projection (1920×1080)
 3. **Pas de backend** : Application 100% statique (fichiers JSON)
 4. **Pas de base de données** : Données stockées dans `/public/data/`
-5. **Mode développement intégré** : Simulation de dates pour tests
+5. **Modes de prévisualisation** : Paramètre URL + mode dev (feature flags)
 6. **Accessibility first** : ARIA labels, navigation clavier
 
 ---
@@ -420,15 +422,52 @@ Les fichiers optimisés seront générés dans `/dist/`
 
 ## ⚙️ Configuration
 
-### Fichiers de configuration principaux
+### Feature Flags
 
-#### `public/data/config.json`
+Fichier : `src/config/features.js`
 
-Configuration globale de l'application.
+```javascript
+/**
+ * Active/désactive la prévisualisation par paramètre URL (?j=-18)
+ */
+export const ENABLE_URL_PREVIEW = true;
 
-#### `public/data/activites.json`
+/**
+ * Active/désactive le mode développement (bouton 🔧 flottant)
+ */
+export const ENABLE_DEV_MODE = true;
+```
 
-Contenu des 48 activités.
+### Scénarios d'usage
+
+#### Développement local
+
+```javascript
+ENABLE_URL_PREVIEW = true;
+ENABLE_DEV_MODE = true;
+```
+
+✅ Tous les modes disponibles
+
+#### Démo / sollicitation collègues
+
+```javascript
+ENABLE_URL_PREVIEW = true;
+ENABLE_DEV_MODE = false;
+```
+
+✅ URLs de partage actives (`?j=-100`, `?j=-99`, etc.)  
+❌ Bouton dev masqué
+
+#### Production (15 janvier 2026)
+
+```javascript
+ENABLE_URL_PREVIEW = false;
+ENABLE_DEV_MODE = false;
+```
+
+✅ Date réelle uniquement  
+❌ Tous les modes de prévisualisation désactivés
 
 ---
 
@@ -454,7 +493,11 @@ un-auteur-dans-sa-classe/
 │   │   │   ├── DefiCreatif.jsx        ✅
 │   │   │   └── ...
 │   │   └── Dev/
+│   ├── config/
+│   │   └── features.js                 ✅ Feature flags
 │   ├── hooks/
+│   │   ├── useDevMode.js
+│   │   └── useUrlPreview.js            ✅ Paramètre URL
 │   ├── utils/
 │   ├── App.jsx
 │   ├── main.jsx
@@ -496,18 +539,70 @@ export default MonComposant;
 
 ---
 
-## 🛠️ Mode développement
+## 🎮 Modes de prévisualisation
 
-### Activation
+### 1. Paramètre URL (recommandé pour démo)
 
-Cliquer sur le bouton **🔧** en bas à droite de l'écran.
+**Activation** : `ENABLE_URL_PREVIEW = true` dans `src/config/features.js`
 
-### Fonctionnalités
+**Fonctionnement** :
 
-- **Dates** : Liste des 48 dates avec activités
-- **Activités** : Liste des 48 activités avec détails
-- **Sélection** : Clic pour simuler une date/activité
-- **Reset** : Bouton pour revenir à la date réelle
+- Ajouter `?j=-18` à l'URL pour accéder à une activité spécifique
+- Le nombre correspond au décalage en jours par rapport au salon (25 avril 2026)
+
+**Exemples d'URLs** :
+
+```
+https://micetf.fr/un-auteur-dans-sa-classe?j=-100  → Activité du 15 janvier 2026 (J-100)
+https://micetf.fr/un-auteur-dans-sa-classe?j=-99   → Activité du 16 janvier 2026 (J-99)
+https://micetf.fr/un-auteur-dans-sa-classe?j=-96   → Activité du 19 janvier 2026 (J-96)
+https://micetf.fr/un-auteur-dans-sa-classe?j=-95   → Activité du 20 janvier 2026 (J-95)
+https://micetf.fr/un-auteur-dans-sa-classe?j=0     → Jour du salon (25 avril 2026)
+```
+
+**Affichage** :
+
+- Banner bleu en haut de page : "📅 Mode prévisualisation : J-18 (date)"
+- Bouton dev masqué automatiquement (évite confusion)
+
+**Gestion d'erreur** :
+
+- Paramètre invalide (`?j=abc`) → Écran d'erreur avec explication
+- Bouton "Retour à l'accueil" pour sortir du mode prévisualisation
+
+---
+
+### 2. Mode développement (localStorage)
+
+**Activation** : `ENABLE_DEV_MODE = true` dans `src/config/features.js`
+
+**Fonctionnement** :
+
+- Bouton flottant 🔧 en bas à droite
+- Panneau avec 2 onglets : "Dates" et "Activités"
+- Navigation entre les 48 activités
+- Persistance entre rechargements (localStorage)
+
+**Usage** :
+
+1. Cliquer sur le bouton 🔧
+2. Sélectionner une date ou une activité
+3. L'application simule cette date
+4. Bouton "Réinitialiser" pour revenir à la date réelle
+
+**Note** : Masqué automatiquement si paramètre URL actif
+
+---
+
+### 3. Priorité de date
+
+Ordre de priorité pour déterminer la date affichée :
+
+```
+1. Paramètre URL (?j=-18)        → si ENABLE_URL_PREVIEW = true
+2. Mode dev (localStorage)       → si ENABLE_DEV_MODE = true
+3. Date réelle                   → par défaut
+```
 
 ---
 
@@ -521,6 +616,14 @@ Cliquer sur le bouton **🔧** en bas à droite de l'écran.
 
 ```bash
 pnpm build
+```
+
+**Avant le déploiement en production** :
+
+```javascript
+// src/config/features.js
+export const ENABLE_URL_PREVIEW = false;
+export const ENABLE_DEV_MODE = false;
 ```
 
 ---
@@ -556,7 +659,11 @@ git push origin feat/nom-fonctionnalite
 
 ### Problème : Le compte à rebours ne démarre pas
 
-✅ **Solution :** Utiliser le mode dev pour simuler une date après le 15 janvier 2026
+✅ **Solution :** Utiliser le paramètre URL `?j=-100` ou activer le mode dev
+
+### Problème : Le paramètre URL ne fonctionne pas
+
+✅ **Solution :** Vérifier que `ENABLE_URL_PREVIEW = true` dans `src/config/features.js`
 
 ---
 
@@ -566,6 +673,7 @@ git push origin feat/nom-fonctionnalite
 
 - ✅ 7/8 modules terminés (87.5%)
 - ✅ 4/4 types d'activités implémentés
+- ✅ Système de prévisualisation complet
 - ⏳ 4-6h de développement restantes
 
 ---
@@ -588,5 +696,5 @@ Tous droits réservés © 2024-2026 MiCetF
 ---
 
 **Dernière mise à jour :** 06 janvier 2026  
-**Version du document :** 2.2  
+**Version du document :** 2.3  
 **Auteur :** MiCetF (Frédéric MISERY)
