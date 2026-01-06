@@ -15,6 +15,19 @@ import AideEnseignant from "./AideEnseignant";
  */
 function DefiCreatif({ activite, auteur, onRetour }) {
     const [showHelp, setShowHelp] = useState(false);
+    const [showImageModal, setShowImageModal] = useState(false);
+
+    // Gestion de la touche Escape pour fermer la modale
+    React.useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === "Escape" && showImageModal) {
+                setShowImageModal(false);
+            }
+        };
+
+        window.addEventListener("keydown", handleEscape);
+        return () => window.removeEventListener("keydown", handleEscape);
+    }, [showImageModal]);
 
     return (
         <div className="h-screen flex flex-col bg-gradient-to-br from-amber-50 to-orange-50 overflow-hidden">
@@ -56,129 +69,191 @@ function DefiCreatif({ activite, auteur, onRetour }) {
                 />
             )}
 
-            {/* Contenu principal centré */}
-            <main className="flex-1 container mx-auto px-6 py-8 flex items-center justify-center">
-                <div className="max-w-5xl w-full">
-                    {/* Carte principale du défi */}
-                    <div className="bg-white rounded-3xl shadow-2xl p-12 border-4 border-amber-300">
-                        {/* En-tête avec auteur */}
-                        {auteur && (
-                            <div className="flex items-center justify-center gap-6 mb-8 pb-8 border-b-2 border-amber-200">
-                                <PhotoAuteur
-                                    photo={auteur.photo}
-                                    nom={auteur.nom}
-                                    source={auteur.source}
-                                    size="large"
-                                    borderColor="border-amber-600"
-                                    iconColor="text-amber-600"
-                                />
-                                <div className="text-center">
-                                    <h2 className="text-3xl font-bold text-gray-800">
-                                        {auteur.nom}
-                                    </h2>
-                                    <p className="text-xl text-amber-600 font-semibold mt-1">
-                                        {auteur.type === "illustrateur" ||
-                                        auteur.type === "illustratrice"
-                                            ? `Illustrat${auteur.type.endsWith("rice") ? "rice" : "eur"}`
-                                            : `Auteur${auteur.type.endsWith("rice") ? "e" : ""}`}
-                                    </p>
-                                    {auteur.voteCE2 && (
-                                        <span className="inline-block text-sm bg-accent text-white px-3 py-1 rounded-full font-semibold mt-2">
-                                            Vote CE2
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Badge "Défi créatif" */}
-                        <div className="text-center mb-8">
-                            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-2xl shadow-lg">
-                                <span className="text-5xl">✏️</span>
-                                <span className="text-3xl font-bold">
-                                    DÉFI CRÉATIF
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Consigne principale */}
-                        <div className="bg-amber-50 rounded-2xl p-8 mb-8 border-2 border-amber-300">
-                            <p className="text-4xl font-bold text-center text-gray-800 leading-tight">
-                                {activite.consigneEleves}
-                            </p>
-                        </div>
-
-                        {/* Image de référence si présente */}
-                        {activite.imageReference && (
-                            <div className="mb-8">
-                                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-amber-200 max-w-3xl mx-auto">
-                                    <img
-                                        src={activite.imageReference}
-                                        alt="Exemple de style"
-                                        className="w-full h-auto object-contain max-h-96"
-                                        onError={(e) => {
-                                            e.target.parentElement.style.display =
-                                                "none";
-                                        }}
+            {/* Contenu principal avec scroll */}
+            <main className="flex-1 container mx-auto px-6 py-4 flex flex-col min-h-0">
+                <div className="flex-1 overflow-y-auto py-4">
+                    <div className="max-w-5xl mx-auto">
+                        {/* Carte principale du défi */}
+                        <div className="bg-white rounded-3xl shadow-2xl p-8 border-4 border-amber-300">
+                            {/* En-tête avec auteur */}
+                            {auteur && (
+                                <div className="flex items-center justify-center gap-4 mb-6 pb-6 border-b-2 border-amber-200">
+                                    <PhotoAuteur
+                                        photo={auteur.photo}
+                                        nom={auteur.nom}
+                                        source={auteur.source}
+                                        size="medium"
+                                        borderColor="border-amber-600"
+                                        iconColor="text-amber-600"
                                     />
-                                </div>
-                                <p className="text-center text-lg text-gray-600 mt-3 italic">
-                                    Exemple de style pour t'inspirer
-                                </p>
-                            </div>
-                        )}
-
-                        {/* Informations pratiques */}
-                        <div className="grid grid-cols-2 gap-6 mt-8">
-                            {/* Durée */}
-                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-300">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <span className="text-4xl">⏱️</span>
-                                    <h3 className="text-2xl font-bold text-blue-900">
-                                        Durée
-                                    </h3>
-                                </div>
-                                <p className="text-3xl font-bold text-blue-700">
-                                    {activite.duree} minutes
-                                </p>
-                            </div>
-
-                            {/* Matériel */}
-                            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border-2 border-green-300">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <span className="text-4xl">📦</span>
-                                    <h3 className="text-2xl font-bold text-green-900">
-                                        Matériel
-                                    </h3>
-                                </div>
-                                <ul className="space-y-1">
-                                    {activite.materiel.map((item, index) => (
-                                        <li
-                                            key={index}
-                                            className="text-xl text-green-800 flex items-center gap-2"
-                                        >
-                                            <span className="text-green-600">
-                                                •
+                                    <div className="text-center">
+                                        <h2 className="text-2xl font-bold text-gray-800">
+                                            {auteur.nom}
+                                        </h2>
+                                        <p className="text-lg text-amber-600 font-semibold mt-1">
+                                            {auteur.type === "illustrateur" ||
+                                            auteur.type === "illustratrice"
+                                                ? `Illustrat${auteur.type.endsWith("rice") ? "rice" : "eur"}`
+                                                : `Auteur${auteur.type.endsWith("rice") ? "e" : ""}`}
+                                        </p>
+                                        {auteur.voteCE2 && (
+                                            <span className="inline-block text-xs bg-accent text-white px-2 py-1 rounded-full font-semibold mt-1">
+                                                Vote CE2
                                             </span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
 
-                        {/* Message d'encouragement */}
-                        <div className="mt-8 text-center">
-                            <p className="text-2xl text-gray-600 italic">
-                                🎨 C'est à toi de jouer ! 🎨
-                            </p>
-                            <p className="text-xl text-gray-500 mt-2">
-                                Laisse libre cours à ta créativité !
-                            </p>
+                            {/* Badge "Défi créatif" */}
+                            <div className="text-center mb-6">
+                                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-6 py-3 rounded-2xl shadow-lg">
+                                    <span className="text-4xl">✏️</span>
+                                    <span className="text-2xl font-bold">
+                                        DÉFI CRÉATIF
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Consigne principale */}
+                            <div className="bg-amber-50 rounded-2xl p-6 mb-6 border-2 border-amber-300">
+                                <p className="text-3xl font-bold text-center text-gray-800 leading-tight">
+                                    {activite.consigneEleves}
+                                </p>
+                            </div>
+
+                            {/* Image de référence si présente */}
+                            {activite.imageReference && (
+                                <div className="mb-6">
+                                    <button
+                                        onClick={() => setShowImageModal(true)}
+                                        className="bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-amber-200 max-w-2xl mx-auto block w-full transition-all duration-300 hover:shadow-2xl hover:border-amber-400 cursor-pointer group relative"
+                                        aria-label="Cliquer pour agrandir l'image"
+                                    >
+                                        <img
+                                            src={activite.imageReference}
+                                            alt="Exemple de style"
+                                            className="w-full h-auto object-contain max-h-80 transition-transform duration-300 group-hover:scale-105"
+                                            onError={(e) => {
+                                                e.target.parentElement.style.display =
+                                                    "none";
+                                            }}
+                                        />
+                                        {/* Indicateur de clic */}
+                                        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 flex items-center justify-center">
+                                            <span className="text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                🔍
+                                            </span>
+                                        </div>
+                                    </button>
+                                    <p className="text-center text-base text-gray-600 mt-2 italic flex items-center justify-center gap-2">
+                                        <span>
+                                            Exemple de style pour t'inspirer
+                                        </span>
+                                        <span className="text-amber-600 font-semibold">
+                                            (clique pour agrandir)
+                                        </span>
+                                    </p>
+                                </div>
+                            )}
+
+                            {/* Informations pratiques */}
+                            <div className="grid grid-cols-2 gap-4 mt-6">
+                                {/* Durée */}
+                                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border-2 border-blue-300">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="text-3xl">⏱️</span>
+                                        <h3 className="text-xl font-bold text-blue-900">
+                                            Durée
+                                        </h3>
+                                    </div>
+                                    <p className="text-2xl font-bold text-blue-700">
+                                        {activite.duree} minutes
+                                    </p>
+                                </div>
+
+                                {/* Matériel */}
+                                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border-2 border-green-300">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="text-3xl">📦</span>
+                                        <h3 className="text-xl font-bold text-green-900">
+                                            Matériel
+                                        </h3>
+                                    </div>
+                                    <ul className="space-y-1">
+                                        {activite.materiel.map(
+                                            (item, index) => (
+                                                <li
+                                                    key={index}
+                                                    className="text-lg text-green-800 flex items-center gap-2"
+                                                >
+                                                    <span className="text-green-600">
+                                                        •
+                                                    </span>
+                                                    {item}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {/* Message d'encouragement */}
+                            <div className="mt-6 text-center">
+                                <p className="text-xl text-gray-600 italic">
+                                    🎨 C'est à toi de jouer ! 🎨
+                                </p>
+                                <p className="text-lg text-gray-500 mt-1">
+                                    Laisse libre cours à ta créativité !
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
+
+            {/* Modale d'agrandissement d'image */}
+            {showImageModal && activite.imageReference && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 animate-[fadeIn_0.2s_ease-out]"
+                    onClick={() => setShowImageModal(false)}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Image agrandie"
+                >
+                    {/* Bouton fermer */}
+                    <button
+                        onClick={() => setShowImageModal(false)}
+                        className="absolute top-6 right-6 bg-white/20 hover:bg-white/30 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl font-bold transition-all hover:scale-110 z-10"
+                        aria-label="Fermer l'image"
+                    >
+                        ✕
+                    </button>
+
+                    {/* Indication */}
+                    <div className="absolute top-6 left-6 bg-white/20 text-white px-6 py-3 rounded-xl backdrop-blur-sm">
+                        <p className="text-lg font-semibold flex items-center gap-2">
+                            <span>🔍</span>
+                            <span>
+                                Clique en dehors de l'image ou appuie sur Echap
+                                pour fermer
+                            </span>
+                        </p>
+                    </div>
+
+                    {/* Conteneur de l'image */}
+                    <div
+                        className="flex items-center justify-center p-4"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <img
+                            src={activite.imageReference}
+                            alt="Exemple de style agrandi"
+                            className="max-w-[85vw] max-h-[85vh] object-contain rounded-xl shadow-2xl"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

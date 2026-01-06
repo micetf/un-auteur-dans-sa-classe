@@ -39,4 +39,14 @@
             transform: translateY(0);
         }
     }
+
+    /* Animation de fondu pour la modale */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 }
