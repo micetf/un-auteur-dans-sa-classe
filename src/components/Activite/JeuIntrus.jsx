@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import VignetteIntrus from "./VignetteIntrus";
 import AideEnseignant from "./AideEnseignant";
+import PhotoAuteur from "./PhotoAuteur";
 
 /**
  * Composant Jeu de l'intrus - Design optimisé plein écran
@@ -31,7 +32,7 @@ function JeuIntrus({ activite, auteur, onRetour }) {
     return (
         <div className="h-screen flex flex-col bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden">
             {/* En-tête ultra-compact avec consigne intégrée */}
-            <header className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 shadow-lg flex-shrink-0">
+            <header className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 shadow-lg flex-shrink-0">
                 <div className="container mx-auto px-6 flex justify-between items-center">
                     {/* Bouton retour */}
                     <button
@@ -45,20 +46,18 @@ function JeuIntrus({ activite, auteur, onRetour }) {
 
                     {/* Titre + Auteur + Consigne - tout sur une ligne */}
                     <div className="flex-1 flex items-center justify-center gap-6 px-6">
-                        {/* Auteur */}
+                        {/* Auteur avec photo */}
                         {auteur && (
-                            <div className="flex items-center gap-2">
-                                {auteur.photo && (
-                                    <img
-                                        src={auteur.photo}
-                                        alt={auteur.nom}
-                                        className="w-8 h-8 rounded-full object-cover border-2 border-white"
-                                        onError={(e) => {
-                                            e.target.style.display = "none";
-                                        }}
-                                    />
-                                )}
-                                <span className="text-sm font-semibold">
+                            <div className="flex items-center gap-3">
+                                <PhotoAuteur
+                                    photo={auteur.photo}
+                                    nom={auteur.nom}
+                                    source={auteur.source}
+                                    size="small"
+                                    borderColor="border-white"
+                                    iconColor="text-purple-600"
+                                />
+                                <span className="text-base font-semibold">
                                     {auteur.nom}
                                 </span>
                             </div>

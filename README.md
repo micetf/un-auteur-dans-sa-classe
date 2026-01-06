@@ -411,6 +411,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - [x] Composant `QuizVisuel.jsx` (layout plein écran sans scroll)
 - [x] Composant `PropositionQuiz.jsx` (mode compact)
+- [x] Composant `PhotoAuteur.jsx` (photo avec source cliquable)
 - [x] Composant `AideEnseignant.jsx` (panneau aide différencié)
 - [x] Layout split 60/40 : image principale | propositions
 - [x] Support 3 propositions maximum
@@ -432,6 +433,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - `src/components/Activite/QuizVisuel.jsx`
 - `src/components/Activite/PropositionQuiz.jsx`
+- `src/components/Activite/PhotoAuteur.jsx`
 - `src/components/Activite/AideEnseignant.jsx`
 
 ---
@@ -442,6 +444,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - [x] Composant `JeuIntrus.jsx` (design optimisé plein écran)
 - [x] Composant `VignetteIntrus.jsx` (grandes vignettes)
+- [x] Composant `PhotoAuteur.jsx` (réutilisé du module 3)
 - [x] Layout adaptatif (3 vignettes = ligne, 4 vignettes = grille 2×2)
 - [x] Grandes vignettes occupant 95% de l'espace vertical
 - [x] Vue split-screen après sélection (50/50)
@@ -463,6 +466,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - `src/components/Activite/JeuIntrus.jsx`
 - `src/components/Activite/VignetteIntrus.jsx`
+- `src/components/Activite/PhotoAuteur.jsx` ⭐ (partagé)
 
 ---
 
@@ -800,7 +804,8 @@ Configuration globale de l'application.
             "type": "illustrateur",
             "voteCE2": true,
             "bio": "Illustrateur passionné par les univers fantastiques...",
-            "photo": "/images/auteurs/tarchala.jpg"
+            "photo": "/images/auteurs/tarchala.jpg",
+            "source": "https://example.com/credit-photo"
         }
         // ... 12 autres auteurs
     ]
@@ -812,6 +817,16 @@ Configuration globale de l'application.
 - `dateSalon` : Date du salon (format ISO YYYY-MM-DD)
 - `dateDebutCompteARebours` : Nombre de jours avant le salon pour commencer (100 = J-100)
 - `auteurs` : Liste des 13 auteurs/illustrateurs invités
+
+**Paramètres des auteurs :**
+
+- `id` : Identifiant unique (utilisé pour les chemins de fichiers)
+- `nom` : Nom complet de l'auteur/illustrateur
+- `type` : "illustrateur", "illustratrice", "auteur" ou "autrice"
+- `voteCE2` : (booléen) Indique si l'auteur est soumis au vote CE2
+- `bio` : Courte biographie
+- `photo` : Chemin absolu depuis `/public/` (commence par `/images/`)
+- `source` : (optionnel) URL de crédit/source de la photo
 
 #### `public/data/activites.json`
 
@@ -872,6 +887,7 @@ un-auteur-dans-sa-classe/
 │   │   │   ├── LectureImage.jsx       ⏳
 │   │   │   ├── QuestionLecture.jsx    ⏳
 │   │   │   ├── DefiCreatif.jsx        ⏳
+│   │   │   ├── PhotoAuteur.jsx        ✅
 │   │   │   ├── AideEnseignant.jsx     ✅
 │   │   │   └── index.js
 │   │   │
@@ -1212,7 +1228,46 @@ devMode.getCurrentDate(); // Obtenir la date courante
 }
 ```
 
----
+## 🖼️ Affichage des photos d'auteurs
+
+### Composant PhotoAuteur
+
+Un composant réutilisable gère l'affichage des photos d'auteurs avec badge source cliquable.
+
+**Usage :**
+
+```jsx
+import { PhotoAuteur } from "@components/Activite";
+
+<PhotoAuteur
+    photo={auteur.photo}
+    nom={auteur.nom}
+    source={auteur.source}
+    size="medium" // 'small' | 'medium' | 'large'
+    borderColor="border-primary"
+    iconColor="text-primary"
+/>;
+```
+
+**Tailles disponibles :**
+
+- `small` : 14×14px (56px) - pour en-têtes compacts
+- `medium` : 20×20px (80px) - affichage standard
+- `large` : 32×32px (128px) - affichage détaillé
+
+**Badge source :**
+
+- Icône "lien externe" cliquable en bas à droite
+- Ouvre l'URL dans un nouvel onglet
+- Tooltip natif affiche l'URL complète au survol
+- S'adapte automatiquement à la taille de la photo
+
+**Accessibilité :**
+
+- Attribut `alt` sur l'image
+- `aria-label` sur le lien source
+- Navigation clavier compatible
+- Contraste respectant WCAG AA
 
 ## 🛠️ Mode développement
 
@@ -1455,6 +1510,48 @@ pnpm add -D tailwindcss@^3.4.1 postcss autoprefixer
 ```
 
 ---
+
+### Problème : Les photos d'auteurs ne s'affichent pas
+
+**Symptôme :** Emplacement vide là où devrait apparaître la photo
+
+✅ **Solutions :**
+
+1. **Vérifier les chemins dans config.json :**
+
+```json
+// ✅ BON - chemin absolu depuis /public/
+"photo": "/images/auteurs/tarchala.jpg"
+
+// ❌ MAUVAIS - chemin relatif
+"photo": "auteurs/tarchala.jpg"
+```
+
+2. **Vérifier que les fichiers existent :**
+
+```bash
+ls public/images/auteurs/
+# Devrait lister : tarchala.jpg, broncard.jpg, etc.
+```
+
+3. **Vérifier l'accès direct :**
+   Ouvrez dans le navigateur : `http://localhost:3000/images/auteurs/tarchala.jpg`
+
+### Problème : Le badge source ne s'affiche pas
+
+**Cause possible :** Champ `source` manquant ou vide dans `config.json`
+
+✅ **Solution :**
+
+Le champ `source` est optionnel. Si vous ne souhaitez pas afficher de source, omettez-le ou laissez-le vide :
+
+```json
+{
+    "id": "tarchala",
+    "photo": "/images/auteurs/tarchala.jpg",
+    "source": "" // Pas de badge affiché
+}
+```
 
 ## 📊 Statistiques du projet
 

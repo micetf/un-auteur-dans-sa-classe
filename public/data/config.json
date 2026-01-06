@@ -13,7 +13,8 @@
             "type": "illustrateur",
             "voteCE2": true,
             "bio": "Illustrateur passionné par les univers fantastiques.",
-            "photo": "auteurs/tarchala.jpg"
+            "photo": "images/auteurs/tarchala.jpg",
+            "source": "https://www.les-editions-des-elephants.com/project/tarchala-lionel/"
         },
         {
             "id": "broncard",
@@ -21,7 +22,8 @@
             "type": "illustratrice",
             "voteCE2": true,
             "bio": "Illustratrice aux couleurs vives et joyeuses.",
-            "photo": "auteurs/broncard.jpg"
+            "photo": "images/auteurs/broncard.jpg",
+            "source": "https://cargocollective.com/xavierebroncard/Mon-parcours"
         },
         {
             "id": "vaquez",
@@ -29,7 +31,7 @@
             "type": "illustrateur",
             "voteCE2": true,
             "bio": "Illustrateur au trait délicat et poétique.",
-            "photo": "auteurs/vaquez.jpg"
+            "photo": "images/auteurs/vaquez.jpg"
         },
         {
             "id": "balme",
@@ -37,70 +39,70 @@
             "type": "illustratrice",
             "voteCE2": true,
             "bio": "Illustratrice aux personnages expressifs.",
-            "photo": "auteurs/balme.jpg"
+            "photo": "images/auteurs/balme.jpg"
         },
         {
             "id": "bonbon",
             "nom": "Cécile BONBON",
             "type": "illustratrice",
             "bio": "Illustratrice spécialisée dans l'univers enfantin.",
-            "photo": "auteurs/bonbon.jpg"
+            "photo": "images/auteurs/bonbon.jpg"
         },
         {
             "id": "dieterle",
             "nom": "Nathalie DIETERLE",
             "type": "illustratrice",
             "bio": "Illustratrice reconnue pour ses albums jeunesse.",
-            "photo": "auteurs/dieterle.jpg"
+            "photo": "images/auteurs/dieterle.jpg"
         },
         {
             "id": "jacoud",
             "nom": "Cécile JACOUD",
             "type": "illustratrice",
             "bio": "Illustratrice au style moderne et coloré.",
-            "photo": "auteurs/jacoud.jpg"
+            "photo": "images/auteurs/jacoud.jpg"
         },
         {
             "id": "bronn",
             "nom": "Theresa BRONN",
             "type": "illustratrice",
             "bio": "Illustratrice créative et audacieuse.",
-            "photo": "auteurs/bronn.jpg"
+            "photo": "images/auteurs/bronn.jpg"
         },
         {
             "id": "pollet",
             "nom": "Clémence POLLET",
             "type": "illustratrice",
             "bio": "Illustratrice aux univers graphiques originaux.",
-            "photo": "auteurs/pollet.jpg"
+            "photo": "images/auteurs/pollet.jpg"
         },
         {
             "id": "lafond",
             "nom": "Marie-Hélène LAFOND",
             "type": "autrice",
             "bio": "Autrice d'histoires tendres et émouvantes.",
-            "photo": "auteurs/lafond.jpg"
+            "photo": "images/auteurs/lafond.jpg"
         },
         {
             "id": "desplanche",
             "nom": "Vincent DESPLANCHE",
             "type": "illustrateur",
             "bio": "Illustrateur aux compositions dynamiques.",
-            "photo": "auteurs/desplanche.jpg"
+            "photo": "images/auteurs/desplanche.jpg"
         },
         {
             "id": "duchesne",
             "nom": "Séverine DUCHESNE",
             "type": "autrice",
             "bio": "Autrice de récits captivants pour la jeunesse.",
-            "photo": "auteurs/duchesne.jpg"
+            "photo": "images/auteurs/duchesne.jpg"
         },
         {
             "id": "morgenstern",
             "nom": "Susie MORGENSTERN",
             "type": "autrice",
             "bio": "Autrice prolifique et talentueuse.",
-            "photo": "auteurs/morgenstern.jpg"
+            "photo": "images/auteurs/morgenstern.jpg"
         }
     ]
 }

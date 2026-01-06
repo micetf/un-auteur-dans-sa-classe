@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import PropositionQuiz from "./PropositionQuiz";
-import InfoAuteur from "./InfoAuteur";
+import PhotoAuteur from "./PhotoAuteur";
 import AideEnseignant from "./AideEnseignant";
 
 /**
@@ -72,27 +72,31 @@ function QuizVisuel({ activite, auteur, onRetour }) {
             <main className="flex-1 container mx-auto px-6 py-4 flex flex-col min-h-0">
                 {/* Info auteur + consigne en une ligne compacte */}
                 <div className="flex-shrink-0 mb-3">
-                    <div className="bg-white rounded-xl shadow-md p-3 border-l-4 border-primary">
-                        <div className="flex items-center justify-between gap-4">
+                    <div className="bg-white rounded-xl shadow-md p-4 border-l-4 border-primary">
+                        <div className="flex items-center justify-between gap-6">
                             {/* Auteur à gauche */}
                             {auteur && (
-                                <div className="flex items-center gap-3">
-                                    {auteur.photo && (
-                                        <img
-                                            src={auteur.photo}
-                                            alt={auteur.nom}
-                                            className="w-12 h-12 rounded-full object-cover border-2 border-primary"
-                                            onError={(e) => {
-                                                e.target.style.display = "none";
-                                            }}
-                                        />
-                                    )}
+                                <div className="flex items-center gap-4">
+                                    <PhotoAuteur
+                                        photo={auteur.photo}
+                                        nom={auteur.nom}
+                                        source={auteur.source}
+                                        size="medium"
+                                        borderColor="border-primary"
+                                        iconColor="text-primary"
+                                    />
                                     <div>
-                                        <h2 className="text-lg font-bold text-gray-800">
+                                        <h2 className="text-xl font-bold text-gray-800">
                                             {auteur.nom}
                                         </h2>
+                                        <p className="text-sm text-primary font-semibold">
+                                            {auteur.type === "illustrateur" ||
+                                            auteur.type === "illustratrice"
+                                                ? `Illustrateur${auteur.type.endsWith("rice") ? "rice" : ""}`
+                                                : `Auteur${auteur.type.endsWith("rice") ? "e" : ""}`}
+                                        </p>
                                         {auteur.voteCE2 && (
-                                            <span className="text-xs bg-accent text-white px-2 py-1 rounded font-semibold">
+                                            <span className="inline-block text-xs bg-accent text-white px-2 py-1 rounded font-semibold mt-1">
                                                 Vote CE2
                                             </span>
                                         )}
