@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Accueil from "@components/Accueil";
-import { QuizVisuel, JeuIntrus } from "@components/Activite";
+import { QuizVisuel, JeuIntrus, LectureImage } from "@components/Activite";
 import { DevToolbar } from "@components/Dev";
 import { useDevMode } from "@hooks/useDevMode";
 import { getTodayISO } from "@utils/dateUtils";
@@ -189,8 +189,19 @@ function App() {
                         />
                     )}
 
+                    {/* Je lis une image */}
+                    {activiteDuJour.type === "lecture" && (
+                        <LectureImage
+                            activite={activiteDuJour}
+                            auteur={getAuteurActivite(activiteDuJour.auteurId)}
+                            onRetour={handleRetourAccueil}
+                        />
+                    )}
+
                     {/* Les autres types d'activités seront ajoutés dans les prochains modules */}
-                    {!["quiz", "intrus"].includes(activiteDuJour.type) && (
+                    {!["quiz", "intrus", "lecture"].includes(
+                        activiteDuJour.type
+                    ) && (
                         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-orange-50">
                             <div className="text-center max-w-2xl p-12">
                                 <h1 className="text-6xl font-bold text-primary mb-8">

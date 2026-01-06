@@ -11,3 +11,7 @@ export { default as PhotoAuteur } from "./PhotoAuteur";
 // Composants pour le jeu de l'intrus
 export { default as JeuIntrus } from "./JeuIntrus";
 export { default as VignetteIntrus } from "./VignetteIntrus";
+
+// Composants pour "Je lis une image"
+export { default as LectureImage } from "./LectureImage";
+export { default as QuestionLecture } from "./QuestionLecture";

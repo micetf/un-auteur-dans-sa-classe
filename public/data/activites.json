@@ -7,26 +7,26 @@
             "auteurId": "tarchala",
             "consigneEnseignant": "Première activité pour lancer le compte à rebours ! Faites observer l'image et laissez les élèves s'exprimer sur ce que ressent le personnage avant de proposer les choix.",
             "consigneEleves": "Observez bien cette illustration. Que ressent le personnage principal ?",
-            "image": "/images/activites/2026-01-05/image-principale.jpg",
+            "image": "/images/activites/2026-01-15/image-principale.jpg",
             "propositions": [
                 {
                     "id": "a",
                     "texte": "Il est très en colère",
-                    "image": "/images/activites/2026-01-05/proposition-a.jpg",
+                    "image": "/images/activites/2026-01-15/proposition-a.jpg",
                     "correct": false,
                     "commentaire": "Regarde bien son visage et sa posture : voit-on vraiment des signes de colère (sourcils froncés, bouche crispée) ?"
                 },
                 {
                     "id": "b",
                     "texte": "Il a l’air triste ou inquiet",
-                    "image": "/images/activites/2026-01-05/proposition-b.jpg",
+                    "image": "/images/activites/2026-01-15/proposition-b.jpg",
                     "correct": true,
                     "commentaire": "Bravo ! On peut deviner sa tristesse ou son inquiétude grâce à son expression et à la situation dans laquelle il se trouve."
                 },
                 {
                     "id": "c",
                     "texte": "Il rit aux éclats",
-                    "image": "/images/activites/2026-01-05/proposition-c.jpg",
+                    "image": "/images/activites/2026-01-15/proposition-c.jpg",
                     "correct": false,
                     "commentaire": "Ici, on ne voit pas vraiment un grand sourire ni des signes de joie."
                 }
@@ -47,28 +47,28 @@
             "vignettes": [
                 {
                     "id": "1",
-                    "image": "/images/activites/2026-01-06/vignette-1.jpg",
+                    "image": "/images/activites/2026-01-16/vignette-1.jpg",
                     "titre": "Vignette 1",
                     "isIntrus": false,
                     "explication": "Cette image n'est pas l'intrus. Elle partage le même univers coloré que les autres."
                 },
                 {
                     "id": "2",
-                    "image": "/images/activites/2026-01-06/vignette-2.jpg",
+                    "image": "/images/activites/2026-01-16/vignette-2.jpg",
                     "titre": "Vignette 2",
                     "isIntrus": true,
                     "explication": "Bravo ! C'est bien l'intrus. Cette image a un style réaliste alors que les autres sont dans un style fantastique typique de Xavière BRONCARD."
                 },
                 {
                     "id": "3",
-                    "image": "/images/activites/2026-01-06/vignette-3.jpg",
+                    "image": "/images/activites/2026-01-16/vignette-3.jpg",
                     "titre": "Vignette 3",
                     "isIntrus": false,
                     "explication": "Cette image n'est pas l'intrus. Elle utilise les mêmes couleurs vives caractéristiques."
                 },
                 {
                     "id": "4",
-                    "image": "/images/activites/2026-01-06/vignette-4.jpg",
+                    "image": "/images/activites/2026-01-16/vignette-4.jpg",
                     "titre": "Vignette 4",
                     "isIntrus": false,
                     "explication": "Cette image n'est pas l'intrus. Elle fait bien partie de l'univers de l'illustratrice."
@@ -78,6 +78,82 @@
                 "maternelle": "Laissez les élèves pointer du doigt et expliquer oralement ce qu'ils voient. Pas besoin de lire les titres.",
                 "cycle2": "Les élèves peuvent lire les titres et expliquer avec leurs propres mots pourquoi une image est l'intrus.",
                 "cycle3": "Demandez aux élèves d'identifier précisément les caractéristiques visuelles qui font de cette image un intrus (couleurs, style, technique, etc.)."
+            }
+        },
+        {
+            "date": "2026-01-19",
+            "type": "lecture",
+            "titre": "Charlie's Follies - L'univers de Pierre VAQUEZ",
+            "auteurId": "vaquez",
+            "consigneEnseignant": "Cette activité permet de découvrir 'Charlie's Follies' et le style unique de Pierre VAQUEZ (gravure 'manière noire'). Laissez les élèves observer librement l'image pendant 30 secondes avant de commencer. Encouragez-les à identifier les contrastes, les jeux de lumière et l'atmosphère particulière créée par l'illustrateur. Les 3 questions guident progressivement du concret (observation du lieu et des objets) vers l'abstrait (ressenti et atmosphère).",
+            "consigneEleves": "Observe bien cette illustration de Pierre VAQUEZ tirée de 'Charlie's Follies'",
+            "image": "/images/activites/2026-01-19/illustration.jpg",
+            "questions": [
+                {
+                    "id": "1",
+                    "texte": "Où se trouve Charlie dans cette scène ?",
+                    "type": "observation",
+                    "options": [
+                        {
+                            "id": "a",
+                            "texte": "Dans son atelier rempli d'objets et de machines"
+                        },
+                        {
+                            "id": "b",
+                            "texte": "Dans une rue animée de la ville"
+                        },
+                        {
+                            "id": "c",
+                            "texte": "Dans un magasin de jouets"
+                        }
+                    ],
+                    "feedback": "Charlie se trouve bien dans son atelier ! Regarde tous ces objets récupérés et ces machines étranges qu'il a construites. Pierre VAQUEZ utilise des contrastes forts pour créer cette atmosphère particulière d'atelier secret."
+                },
+                {
+                    "id": "2",
+                    "texte": "Que fait Charlie avec tous ces objets ?",
+                    "type": "comprehension",
+                    "options": [
+                        {
+                            "id": "a",
+                            "texte": "Il les range soigneusement dans des cartons"
+                        },
+                        {
+                            "id": "b",
+                            "texte": "Il crée des machines et des robots fantaisistes"
+                        },
+                        {
+                            "id": "c",
+                            "texte": "Il les vend au marché aux puces"
+                        }
+                    ],
+                    "feedback": "Exact ! Charlie est un inventeur. Il transforme les objets abandonnés en machines extraordinaires. Observe les détails : chaque machine est unique. C'est ce qu'on appelle de l'art brut - créer avec des matériaux de récupération."
+                },
+                {
+                    "id": "3",
+                    "texte": "Comment Pierre VAQUEZ crée-t-il cette atmosphère spéciale ?",
+                    "type": "interpretation",
+                    "options": [
+                        {
+                            "id": "a",
+                            "texte": "Avec des couleurs très vives et joyeuses"
+                        },
+                        {
+                            "id": "b",
+                            "texte": "Avec des contrastes entre l'ombre et la lumière"
+                        },
+                        {
+                            "id": "c",
+                            "texte": "Avec des dessins très simples et rapides"
+                        }
+                    ],
+                    "feedback": "Bravo ! Pierre VAQUEZ utilise une technique de gravure appelée 'manière noire'. Il travaille les contrastes pour faire jaillir la lumière du noir. Cela crée une atmosphère poétique qui rappelle le cinéma muet. Charlie vit dans un monde entre ombre et lumière, entre solitude et créativité."
+                }
+            ],
+            "adaptations": {
+                "maternelle": "Utilisez seulement les questions 1 et 2. Pour la question 1, pointez du doigt les différents éléments de l'atelier. Pour la question 2, montrez les machines et demandez : 'Pourquoi Charlie fait-il ça ?' Acceptez toutes les réponses qui montrent que Charlie aime créer.",
+                "cycle2": "Proposez les trois questions. Après la question 2, demandez oralement : 'Que ressent Charlie quand il crée ses machines ?' Pour la question 3, expliquez simplement qu'un contraste, c'est quand on voit à la fois des parties très sombres et des parties très claires.",
+                "cycle3": "Après les trois questions, prolongez avec : 'L'histoire nous dit que Charlie danse les claquettes de joie pour ses machines. À votre avis, pourquoi fait-il ça la nuit, quand personne ne le voit ?' Puis : 'Que va-t-il se passer quand Charlie vendra tous ses robots ?' Cela permet d'aborder les thèmes de la solitude, de la création artistique et du lien affectif avec ses œuvres."
             }
         }
     ],

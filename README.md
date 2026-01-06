@@ -195,13 +195,15 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 **Fonctionnement :**
 
-- Une grande illustration occupe tout l'écran
-- Une série de 2-3 questions sont posées successivement
+- Une grande illustration occupe 60% de l'écran (gauche)
+- Une série de 2-3 questions sont posées successivement (40% droite)
 - Les élèves répondent à chaque question avant de passer à la suivante
 - Bouton "Question suivante" pour progresser
 - Chaque question peut avoir des options de réponse (images ou mots)
+- Barre de progression affichant la question courante
+- Feedback pédagogique après chaque réponse
 
-**Format JSON (à implémenter) :**
+**Format JSON :**
 
 ```json
 {
@@ -273,7 +275,30 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 - `q1-option-a.jpg`, `q1-option-b.jpg` : Images optionnelles pour les réponses
 - `q2-option-a.jpg`, etc. : Selon les besoins
 
-**État : ⏳ À IMPLÉMENTER**
+**État : ✅ IMPLÉMENTÉ**
+
+---
+
+#### Activité exemple : Pierre VAQUEZ - Charlie's Follies
+
+Une première activité "Je lis une image" a été créée pour Pierre VAQUEZ autour de son album "Charlie's Follies" (Éditions Sarbacane, 2025).
+
+**Synopsis :** Charlie, personnage timide, récupère la nuit des objets abandonnés pour créer dans son atelier des machines et robots fantaisistes. Il danse les claquettes de joie pour ses créations. Un jour, il vend tout et se retrouve riche mais seul.
+
+**Les 3 questions :**
+
+1. **Observation** : "Où se trouve Charlie dans cette scène ?" → Son atelier
+2. **Compréhension** : "Que fait Charlie avec tous ces objets ?" → Crée des machines (art brut)
+3. **Interprétation** : "Comment Pierre VAQUEZ crée-t-il cette atmosphère ?" → Technique "manière noire"
+
+**Objectifs pédagogiques :**
+
+- Découvrir l'univers de "Charlie's Follies"
+- Comprendre la technique de gravure "manière noire"
+- Introduire le concept d'art brut
+- Analyser les contrastes lumière/ombre
+
+**Fichier JSON :** `public/data/activites.json` (activité du 2026-01-19)
 
 ---
 
@@ -349,7 +374,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 ## 📊 État d'avancement
 
-### ✅ Modules terminés (5/8)
+### ✅ Modules terminés (6/8)
 
 #### Module 1 : Fondations ✅
 
@@ -499,48 +524,48 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 ---
 
-### ⏳ Modules en cours / à faire (3/8)
+#### Module 6 : "Je lis une image" ✅
 
-#### Module 6 : "Je lis une image" ⏳
+**Statut : 100% - Terminé**
 
-**Statut : 0% - À implémenter**
+- [x] Créer composant `LectureImage.jsx`
+- [x] Gérer état currentQuestion (useState)
+- [x] Implémenter navigation entre questions
+- [x] Créer composant `QuestionLecture.jsx`
+- [x] Support options avec images ou texte
+- [x] Affichage feedback par question
+- [x] Bouton "Question suivante"
+- [x] Bouton "Recommencer" à la fin
+- [x] Intégration dans App.jsx (type 'lecture')
+- [x] Adaptation multi-cycles (2-3 questions selon niveau)
+- [x] Thème visuel distinct (indigo/bleu)
+- [x] Barre de progression des questions
 
-**À faire :**
+**Fonctionnalités :**
 
-- [ ] Créer composant `LectureImage.jsx`
-- [ ] Gérer état currentQuestion (useState)
-- [ ] Implémenter navigation entre questions
-- [ ] Créer composant `QuestionLecture.jsx`
-- [ ] Support options avec images ou texte
-- [ ] Affichage feedback par question
-- [ ] Bouton "Question suivante"
-- [ ] Bouton "Terminer" sur dernière question
-- [ ] Intégration dans App.jsx (type 'lecture')
-- [ ] Adaptation multi-cycles (2-3 questions selon niveau)
+- Layout 60/40 : image principale à gauche, questions à droite
+- Navigation séquentielle à travers 2-3 questions
+- Types de questions : observation, compréhension, interprétation
+- Feedback pédagogique après chaque réponse
+- Support optionnel d'images pour les options
+- Bouton "Recommencer" pour réinitialiser l'activité
 
-**Complexité estimée :** Moyenne  
-**Temps estimé :** 4-6 heures  
-**Priorité :** Haute (type d'activité essentiel)
+**Activité exemple créée :**
 
-**Design cible :**
+- Date : 2026-01-19
+- Auteur : Pierre VAQUEZ
+- Album : "Charlie's Follies"
+- 3 questions progressives sur l'univers de l'album
 
-```
-┌─────────────────────────────────────────┐
-│ ← Accueil │ Titre │ Auteur │ Aide 💡  │
-├─────────────────────────────────────────┤
-│                                         │
-│         GRANDE ILLUSTRATION             │
-│            (plein écran)                │
-│                                         │
-│  ┌────────────────────────────────┐   │
-│  │ Question 1/3 : Qui vois-tu ?   │   │
-│  │ ○ Option A   ○ Option B         │   │
-│  │ [Suivant →]                     │   │
-│  └────────────────────────────────┘   │
-└─────────────────────────────────────────┘
-```
+**Fichiers clés :**
+
+- `src/components/Activite/LectureImage.jsx`
+- `src/components/Activite/QuestionLecture.jsx`
+- Exemple JSON : activité Pierre Vaquez (Charlie's Follies)
 
 ---
+
+### ⏳ Modules en cours / à faire (2/8)
 
 #### Module 7 : Micro-défi créatif ⏳
 
@@ -592,14 +617,13 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 
 - [x] Router de base dans App.jsx (state-based)
 - [x] Navigation retour accueil
-- [x] Chargement dynamique quiz et intrus
+- [x] Chargement dynamique quiz, intrus et lecture
 - [x] Gestion états loading/error
 - [x] PropTypes sur tous les composants
 - [x] Design plein écran sans scroll
 
 **⏳ À faire :**
 
-- [ ] Intégrer type 'lecture' dans App.jsx
 - [ ] Intégrer type 'defi' dans App.jsx
 - [ ] Transitions animées entre vues (Framer Motion ?)
 - [ ] Écran de chargement amélioré
@@ -620,7 +644,7 @@ L'application propose **4 types d'activités** différentes pour varier les appr
 ### 📈 Progression globale
 
 ```
-████████████████░░░░░░░░  62.5% (5/8 modules)
+██████████████████░░░░░░  75% (6/8 modules)
 
 Détail par module :
 ✅ Module 1 : Fondations                    [████████████████████] 100%
@@ -628,54 +652,52 @@ Détail par module :
 ✅ Module 3 : Quiz visuel                   [████████████████████] 100%
 ✅ Module 4 : Jeu de l'intrus               [████████████████████] 100%
 ✅ Module 5 : Mode développement            [████████████████████] 100%
-⏳ Module 6 : "Je lis une image"            [░░░░░░░░░░░░░░░░░░░░]   0%
+✅ Module 6 : "Je lis une image"            [████████████████████] 100%
 ⏳ Module 7 : Micro-défi créatif            [░░░░░░░░░░░░░░░░░░░░]   0%
 ⏳ Module 8 : Intégration finale            [██████████░░░░░░░░░░]  50%
 ```
 
 **Estimation pour finalisation :**
 
-- Module 6 : 4-6 heures
 - Module 7 : 2-3 heures
 - Module 8 : 6-8 heures
-- **Total : 12-17 heures de développement**
+- **Total : 8-11 heures de développement**
 
 ---
 
 ### 🎯 Prochaines étapes immédiates
 
-**Sprint 1 : Types d'activités (10h)**
+**Sprint 1 : Dernier type d'activité (3h)**
 
-1. Implémenter "Je lis une image" (6h)
-
-    - Composant LectureImage
-    - Système questions/réponses
-    - Navigation entre questions
-    - Tests avec données JSON
-
-2. Implémenter "Micro-défi créatif" (4h)
+1. Implémenter "Micro-défi créatif" (3h)
     - Composant DefiCreatif
-    - Affichage consigne + image
+    - Affichage consigne plein écran
+    - Support image de référence optionnelle
+    - Affichage matériel nécessaire
     - Tests avec données JSON
 
-**Sprint 2 : Contenu (20h)** 3. Rédiger les 48 activités (15h)
+**Sprint 2 : Contenu (20h)**
+
+2. Rédiger les 48 activités (15h)
 
 - 12 quiz visuels
 - 12 jeux de l'intrus
 - 12 lectures d'images
 - 12 défis créatifs
 
-4. Collecter/créer les images (5h)
+3. Collecter/créer les images (5h)
     - 13 photos auteurs
     - Images pour les 48 activités
 
-**Sprint 3 : Finalisation (8h)** 5. Intégration et tests (4h)
+**Sprint 3 : Finalisation (8h)**
 
-- Intégrer types lecture et defi dans App.jsx
+4. Intégration et tests (4h)
+
+- Intégrer type defi dans App.jsx
 - Tests sur vidéoprojecteur
 - Ajustements design
 
-6. Polish et déploiement (4h)
+5. Polish et déploiement (4h)
     - Animations transitions
     - Optimisations performances
     - Déploiement sur micetf.fr
@@ -884,8 +906,8 @@ un-auteur-dans-sa-classe/
 │   │   │   ├── PropositionQuiz.jsx    ✅
 │   │   │   ├── JeuIntrus.jsx          ✅
 │   │   │   ├── VignetteIntrus.jsx     ✅
-│   │   │   ├── LectureImage.jsx       ⏳
-│   │   │   ├── QuestionLecture.jsx    ⏳
+│   │   │   ├── LectureImage.jsx       ✅
+│   │   │   ├── QuestionLecture.jsx    ✅
 │   │   │   ├── DefiCreatif.jsx        ⏳
 │   │   │   ├── PhotoAuteur.jsx        ✅
 │   │   │   ├── AideEnseignant.jsx     ✅
@@ -1105,7 +1127,7 @@ devMode.getCurrentDate(); // Obtenir la date courante
             "titre": "Je lis une image",
             "auteurId": "vaquez",
             "consigneEnseignant": "Guidez les élèves à travers les trois questions pour analyser progressivement l'illustration.",
-            "consigneEleves": "Observe bien cette illustration de Clémentine VAQUEZ",
+            "consigneEleves": "Observe bien cette illustration de Pierre VAQUEZ",
             "image": "/images/activites/2026-01-19/illustration.jpg",
             "questions": [
                 {
@@ -1555,16 +1577,16 @@ Le champ `source` est optionnel. Si vous ne souhaitez pas afficher de source, om
 
 ## 📊 Statistiques du projet
 
-**État actuel (Décembre 2024) :**
+**État actuel (Janvier 2026) :**
 
-- ✅ 5/8 modules terminés (62.5%)
-- ✅ 2/4 types d'activités implémentés
-- ⏳ 2/4 types à implémenter
-- ⏳ 12-17h de développement restantes
+- ✅ 6/8 modules terminés (75%)
+- ✅ 3/4 types d'activités implémentés
+- ⏳ 1/4 types à implémenter
+- ⏳ 8-11h de développement restantes
 
 **Lignes de code :**
 
-- React : ~2800 lignes
+- React : ~3500 lignes
 - CSS/Tailwind : ~200 lignes
 - JSON : ~1500 lignes (à compléter)
 
@@ -1596,7 +1618,7 @@ Tous droits réservés © 2024-2026 MiCetF
 - [x] Quiz visuel (3 propositions)
 - [x] Jeu de l'intrus (3-4 vignettes)
 - [x] Mode développement
-- [ ] "Je lis une image" (2-3 questions)
+- [x] "Je lis une image" (2-3 questions)
 - [ ] Micro-défi créatif
 - [ ] 48 activités complètes avec images
 - [ ] Tests finaux et déploiement
@@ -1618,6 +1640,6 @@ Tous droits réservés © 2024-2026 MiCetF
 
 ---
 
-**Dernière mise à jour :** 05 janvier 2026  
-**Version du document :** 2.0  
+**Dernière mise à jour :** 06 janvier 2026  
+**Version du document :** 2.1  
 **Auteur :** MiCetF (Frédéric MISERY)
