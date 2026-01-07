@@ -68,8 +68,9 @@
             "id": "bronn",
             "nom": "Theresa BRONN",
             "type": "illustratrice",
-            "bio": "Illustratrice créative et audacieuse.",
-            "photo": "images/auteurs/bronn.jpg"
+            "bio": "Illustratrice américaine qui fusionne photographie et dessin.",
+            "photo": "images/auteurs/bronn.jpg",
+            "source": "https://www.la-charte.fr/repertoire/bronn-barnoin-theresa/"
         },
         {
             "id": "pollet",

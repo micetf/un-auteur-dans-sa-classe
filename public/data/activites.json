@@ -177,6 +177,40 @@
 
                 "cycle3": "Montrez le zoom sur la trousse et analysez le style : 'Delphine BALME utilise des FORMES GÉOMÉTRIQUES simples (cylindre pour la trousse, rectangle pour la règle) et des COULEURS DOUCES en nombre limité. Elle ne dessine pas tous les détails, juste l'essentiel pour qu'on reconnaisse l'objet et son ambiance.' Demandez aux élèves de choisir un petit objet de leur quotidien qui a du sens pour eux. Consigne précise : 1) Forme géométrique simple de base (cercle, carré, cylindre, rectangle), 2) 1-2 détails caractéristiques SEULEMENT, 3) Palette de 2-3 couleurs cohérente (plutôt tons chauds OU plutôt tons froids), 4) Un titre court en bas : 'Mon/ma...' Temps : 8 minutes de production, 2 minutes de partage. Critère de réussite : on doit reconnaître l'objet ET sentir qu'il est important pour son auteur (par le soin, les couleurs choisies)."
             }
+        },
+        {
+            "date": "2026-01-22",
+            "type": "quiz",
+            "titre": "Quand la photo rencontre le dessin - Theresa BRONN",
+            "auteurId": "bronn",
+            "consigneEnseignant": "Cette activité permet de découvrir la technique unique de Theresa BRONN : la fusion entre photographie et dessin. L'image provient de 'Pas de bol !' (Susie Morgenstern, 2014) où de vrais enfants ont été photographiés dans une scène de petit-déjeuner, puis des personnages dessinés ont été ajoutés par-dessus. AVANT de poser la question, laissez les élèves observer l'image 30-45 secondes. Demandez : 'Que voyez-vous ?' puis 'Comment cette image a-t-elle été fabriquée selon vous ?' Cette technique s'appelle 'illustration hybride' ou 'photo-illustration'. Theresa BRONN photographie d'abord une scène réelle (ici : table, bols, enfants), puis elle dessine par-dessus des personnages imaginaires. Cela crée un effet spécial : le monde réel et l'imaginaire se mélangent. Les personnages dessinés sont des 'doubles fictionnels' des enfants réels. Pour le Cycle 2, aidez visuellement en pointant sur l'image projetée : 'Ici, c'est une vraie photo (table, bols). Là, c'est un dessin (petit personnage).' Insistez sur le POURQUOI : mélanger photo + dessin permet de raconter une histoire universelle tout en gardant une touche de réalité.",
+            "consigneEleves": "Observe bien cette image de Theresa BRONN. Comment a-t-elle créé cette illustration ?",
+            "image": "/images/activites/2026-01-22/image-principale.jpg",
+            "propositions": [
+                {
+                    "id": "a",
+                    "texte": "Elle a tout dessiné à la main, comme un dessin animé",
+                    "correct": false,
+                    "commentaire": "Non, regarde bien : la table, les bols, le lait sont de vraies photos ! On voit les détails réels, les textures, les reflets. Ce ne sont pas des dessins."
+                },
+                {
+                    "id": "b",
+                    "texte": "Elle a mélangé de vraies photos avec des dessins ajoutés par-dessus",
+                    "correct": true,
+                    "commentaire": "Bravo ! Theresa BRONN utilise une technique spéciale appelée 'photo-illustration'. Elle photographie d'abord une vraie scène (ici : le petit-déjeuner), puis elle dessine des personnages imaginaires par-dessus. Cela mélange le monde réel (photo) et l'imaginaire (dessin). Cette technique crée un effet magique : on se dit 'C'est vrai ? C'est inventé ?' Les deux à la fois ! Dans 'Pas de bol !', les vrais enfants de la famille Morgenstern ont joué la scène, et Theresa a ajouté les petits personnages dessinés pour raconter l'histoire."
+                },
+                {
+                    "id": "c",
+                    "texte": "Elle a tout créé sur ordinateur avec un logiciel",
+                    "correct": false,
+                    "commentaire": "Non, ce n'est pas uniquement numérique. Theresa BRONN utilise de VRAIES photographies qu'elle prend avec un appareil photo. Ensuite, elle dessine les personnages à la main ou numériquement, puis les assemble. La base reste la photographie réelle."
+                }
+            ],
+            "adaptations": {
+                "maternelle": "Simplifiez drastiquement la question. Au lieu de demander 'Comment l'image est créée ?', montrez l'image et dites : 'On va jouer à un jeu. Vous allez me montrer ce qui est une VRAIE PHOTO (pointez la table, les bols) et ce qui est un DESSIN (pointez les petits personnages).' Faites pointer physiquement aux élèves : 'Montrez-moi quelque chose qui est une vraie photo dans l'image. Maintenant montrez-moi un dessin.' Puis révélez : 'Theresa BRONN a fait les DEUX ! Elle a d'abord pris une photo avec un appareil, puis elle a dessiné par-dessus.' Mimez les gestes : faire semblant de prendre une photo, puis de dessiner. Durée : 5 minutes maximum.",
+                "cycle2": "Utilisez un étayage visuel fort AVANT de poser la question. Projetez l'image et pointez physiquement : 'Regardez ICI (table, bols, lait) : est-ce que ça ressemble à une vraie photo ou à un dessin ?' → Attendez les réponses : 'Oui, c'est une vraie photo ! On voit les détails, les reflets.' Puis pointez : 'Et LÀ (petits personnages) : est-ce une photo ou un dessin ?' → 'C'est un dessin ! Les personnages sont colorés de façon simple, avec un trait.' Ensuite seulement, posez la question : 'Alors, comment Theresa BRONN a créé cette image ?' Après validation de la bonne réponse, expliquez le POURQUOI : 'Pourquoi mélanger photo et dessin ? Pour raconter une histoire qui se passe dans le monde réel (la cuisine, le petit-déjeuner) MAIS avec des personnages imaginaires (les petits bonhommes). C'est comme si les dessins vivaient dans notre monde !' Montrez un autre exemple si possible (chercher 'Pas de bol Theresa Bronn' sur internet).",
+                "cycle3": "Après avoir validé la bonne réponse, approfondissez l'analyse technique et narrative. Questions de prolongement : 1) TECHNIQUE : 'Quels sont les avantages de cette technique hybride par rapport à tout dessiner ou tout photographier ?' → La photo apporte le réalisme (on croit à la scène), le dessin apporte l'imaginaire et l'universel (les personnages ne sont pas de vrais enfants précis, mais des personnages auxquels tous peuvent s'identifier). 2) NARRATIF : 'Pourquoi Theresa BRONN a-t-elle photographié de vrais enfants mais dessiné des personnages par-dessus ?' → Les dessins sont des 'doubles fictionnels' : ce ne sont plus les vrais enfants de la famille Morgenstern, mais des personnages d'une histoire universelle. Tous les enfants peuvent se reconnaître dans cette dispute du matin. 3) ARTISTIQUE : 'Est-ce que cette technique existe ailleurs ?' → Au cinéma (Qui veut la peau de Roger Rabbit ?), en BD, dans la publicité. C'est une forme d'art appelée 'photo-illustration'. ACTIVITÉ PROLONGEMENT (si temps) : 'Si vous deviez créer une image hybride photo + dessin, quelle scène photographieriez-vous et quel personnage dessineriez-vous par-dessus ?' Exemples : photo de la cour de récré + monstre dessiné, photo de la classe + super-héros dessiné, photo de la cantine + dragon dessiné."
+            }
         }
     ],
     "datesActivites": [
