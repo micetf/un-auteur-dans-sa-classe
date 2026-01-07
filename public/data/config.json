@@ -77,7 +77,8 @@
             "nom": "Clémence POLLET",
             "type": "illustratrice",
             "bio": "Illustratrice aux univers graphiques originaux.",
-            "photo": "images/auteurs/pollet.jpg"
+            "photo": "images/auteurs/pollet.jpg",
+            "source": "https://www.la-charte.fr/portraits-chartistes/clemence-pollet/"
         },
         {
             "id": "lafond",
