@@ -36,8 +36,14 @@ function DecompteAffichage({ daysRemaining, status, dateSalon }) {
     };
 
     const getText = () => {
-        if (status === "too-early")
-            return "Le compte à rebours n'a pas encore commencé";
+        if (status === "too-early") {
+            const dateDebut = new Date(dateSalon);
+            dateDebut.setDate(dateDebut.getDate() - 100);
+            return `Début le ${dateDebut.toLocaleDateString("fr-FR", {
+                day: "numeric",
+                month: "long",
+            })}`;
+        }
         if (status === "day-j") return "C'est aujourd'hui !";
         if (status === "after") return "L'événement est passé";
         return "avant le salon";

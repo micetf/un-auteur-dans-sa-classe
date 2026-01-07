@@ -16,7 +16,7 @@ function BoutonActivite({ hasActivity, status, onClick }) {
     const getButtonContent = () => {
         if (status === "too-early") {
             return {
-                text: "Le compte à rebours n'a pas encore commencé",
+                text: "Revenez bientôt",
                 emoji: "⏳",
                 classes: "from-gray-400 to-gray-500 cursor-not-allowed",
             };
